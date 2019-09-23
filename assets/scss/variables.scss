@@ -1,0 +1,14 @@
+$palettes: (
+  footer: (
+    background: #f4f6f8,
+    color--highlight: #aaa
+  )
+);
+
+.snip-footer {
+  background: palette(footer, background);
+}
+
+.snip-footer__highlight {
+  color: palette(footer, color--highlight);
+}
