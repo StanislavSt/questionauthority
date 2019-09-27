@@ -1,32 +1,16 @@
-const pkg = require("./package");
-
 const axios = require("axios");
 
 module.exports = {
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: ["~/plugins/components", "~/plugins/filters"],
-
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
     [
       "storyblok-nuxt",
       { accessToken: "HLNQOnLSw6th5NQwTHKMvwtt", cacheProvider: "memory" }
     ]
   ],
-
-  /*
-   ** Router middleware
-   */
+  plugins: ["~/plugins/components", "~/plugins/filters"],
   router: {
     middleware: "setCacheVersion"
   },
-
-  mode: "universal",
-
   /*
    ** Headers of the page
    */
@@ -60,16 +44,10 @@ module.exports = {
       }
     ]
   },
-
   /*
-   ** Customize the progress-bar color
+   ** Customize the progress bar color
    */
-  loading: { color: "#fff" },
-
-  /*
-   ** Global CSS
-   */
-  css: ["@/Styles/variables.scss"],
+  loading: { color: "#3B8070" },
 
   generate: {
     routes: function(callback) {
@@ -144,7 +122,6 @@ module.exports = {
         });
     }
   },
-
   /*
    ** Build configuration
    */
