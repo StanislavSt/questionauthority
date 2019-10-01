@@ -29,7 +29,7 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href: "https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
+        href: "http://localhost:3006/themes/base/snipcart.css"
       }
     ],
     script: [
@@ -39,6 +39,7 @@ module.exports = {
       {
         src: "https://cdn.snipcart.com/scripts/2.0/snipcart.js",
         id: "snipcart",
+        "data-autopop": "false",
         "data-api-key":
           "NTUwM2YyNDgtZTFhOC00OTRmLWEwZjctOTBlMDc0MWI4YjBlNjM3MDQ3NzY4MzQxMDc0MTUy"
       }
