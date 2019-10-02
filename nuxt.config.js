@@ -29,7 +29,7 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href: "http://localhost:3006/themes/base/snipcart.css"
+        href: "https://app.snipcart.com/themes/base/snipcart.css"
       }
     ],
     script: [
