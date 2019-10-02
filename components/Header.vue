@@ -8,7 +8,7 @@
 		<div class="navigation-container">
 			<div class="topnav">
 				<div class="item">
-					<nuxt-link to="/store">Store</nuxt-link>
+					<nuxt-link to="/products">Store</nuxt-link>
 				</div>
 				<div class="item">
 					<nuxt-link to="/media">Media</nuxt-link>
@@ -28,7 +28,7 @@
 export default {};
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .logo-container img {
 	padding: 4rem 0 0 0;
 	display: block;

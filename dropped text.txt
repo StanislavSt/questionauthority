@@ -1,0 +1,1 @@
+/media/stanislav/1d4f86db-ca2c-4df5-9170-2518820c1b2a/stanislav/questionauthority/vue-nuxt-boilerplate-master/nuxt.config.js

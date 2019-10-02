@@ -9,8 +9,7 @@
 				<div class="item">Kiril kiryakov</div>
 			</div>
 		</div>
-		<!--
-		<component
+		<!--<component
 			v-if="story.content.component"
 			:key="story.content._uid"
 			:blok="story.content"
@@ -109,6 +108,7 @@ export default {
 	text-align: center;
 }
 .image-container img {
+	max-width: 90%;
 }
 .image-container .image-description {
 	display: flex;
@@ -116,12 +116,11 @@ export default {
 	width: 450px;
 	margin-left: auto;
 	margin-right: auto;
+	max-width: 90%;
 }
 .image-container .image-description .item {
 	justify-content: space-between;
 	text-transform: uppercase;
 	font-size: 12px;
-}
-.image-container .image-description .item:nth-child(2) {
 }
 </style>

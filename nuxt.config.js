@@ -4,7 +4,7 @@ module.exports = {
   modules: [
     [
       "storyblok-nuxt",
-      { accessToken: "HLNQOnLSw6th5NQwTHKMvwtt", cacheProvider: "memory" }
+      { accessToken: "GaHO0tre64SXQQg7uSv7GQtt", cacheProvider: "memory" }
     ]
   ],
   plugins: ["~/plugins/components", "~/plugins/filters"],
@@ -52,7 +52,7 @@ module.exports = {
 
   generate: {
     routes: function(callback) {
-      const token = `HLNQOnLSw6th5NQwTHKMvwtt`; // replace with your key
+      const token = `GaHO0tre64SXQQg7uSv7GQtt`; // replace with your key
       const per_page = 100;
       const version = "draft";
       let cache_version = 0;
@@ -130,15 +130,5 @@ module.exports = {
     /*
      ** Run ESLint on save
      */
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        });
-      }
-    }
   }
 };

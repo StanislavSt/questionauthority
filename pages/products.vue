@@ -1,0 +1,122 @@
+<template>
+	<div>
+		<Header />
+		<div class="products">
+			<ul class="overview">
+				<li class="overview__item" v-for="product in stories" :key="product.full_slug">
+					<nuxt-link class="overview__item-inner" :to="'/' + product.full_slug">
+						<img
+							v-if="product.content.images.length > 0"
+							:src="product.content.images[0].filename | resize('300x0')"
+							:alt="product.content.images[0].name"
+						/>
+						<div class="product-name">{{product.content.name}}</div>
+					</nuxt-link>
+				</li>
+			</ul>
+		</div>
+	</div>
+</template>
+
+
+
+
+<script>
+import Header from "@/components/Header.vue";
+export default {
+	data() {
+		return { stories: [] };
+	},
+	components: {
+		Header
+	},
+	asyncData(context) {
+		// Check if we are in the editing mode
+		let editMode = false;
+
+		if (
+			context.query._storyblok ||
+			context.isDev ||
+			(typeof window !== "undefined" &&
+				window.localStorage.getItem("_storyblok_draft_mode"))
+		) {
+			if (typeof window !== "undefined") {
+				window.localStorage.setItem("_storyblok_draft_mode", "1");
+				if (window.location == window.parent.location) {
+					window.localStorage.removeItem("_storyblok_draft_mode");
+				}
+			}
+			editMode = true;
+		}
+		return context.app.$storyapi
+			.get(`cdn/stories/`, {
+				starts_with: "products/",
+				version: editMode ? "draft" : "published",
+				cv: context.store.state.cacheVersio
+			})
+			.then(res => {
+				return res.data;
+			})
+			.catch(res => {
+				if (!res.response) {
+					console.error(res);
+					errorCallback({
+						statusCode: 404,
+						message: "Failed to receive content from the api."
+					});
+				} else {
+					console.error(res.response.data);
+					errorCallback({
+						statusCode: res.response.status,
+						message: res.response.data
+					});
+				}
+			});
+	}
+};
+</script>
+
+<style>
+.products {
+	padding-top: 5rem;
+	margin: 0 auto;
+	max-width: 80%;
+	padding-left: 4rem;
+}
+
+.overview {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 20px;
+	min-height: 100vh;
+}
+
+.overview__item {
+	margin: 0 0.5rem;
+	list-style: none;
+}
+
+.overview__item-inner {
+	padding: 0.5rem;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #000;
+	display: block;
+	max-width: 100%;
+}
+.overview__item-inner img {
+	width: 18rem;
+	height: 18rem;
+}
+.overview__item-inner .product-name {
+	display: flex;
+	justify-content: center;
+	max-width: 70%;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-top: 3rem;
+}
+</style>

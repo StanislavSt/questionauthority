@@ -21,24 +21,21 @@
 		<div class="product__information">
 			<h1 class="product__headline">{{ blok.name }}</h1>
 			<div class="product__price">€ {{ blok.price }}</div>
-			<div
-				class="product__description"
-				v-html="$options.filters.markdown(blok.description.toString())"
-			></div>
-			<button
-				class="snipcart-add-item"
-				:data-item-id="blok._uid"
-				:data-item-name="blok.name"
-				:data-item-price="blok.price"
-			>Consume</button>
-			<a href="#" class="snipcart-checkout">Click here to checkout</a>
-			<div>Lots of content</div>
-			<div class="snipcart-summary">
-				Number of items:
-				<span class="snipcart-total-items"></span>
-				Total price:
-				<span class="snipcart-total-price"></span>
-			</div>
+			<div class="product__description">{{ blok.description }}</div>
+		</div>
+		<button
+			class="snipcart-add-item"
+			:data-item-id="blok._uid"
+			:data-item-name="blok.name"
+			:data-item-price="blok.price"
+		>Consume</button>
+		<a href="#" class="snipcart-checkout">Click here to checkout</a>
+		<div>Lots of content</div>
+		<div class="snipcart-summary">
+			Number of items:
+			<span class="snipcart-total-items"></span>
+			Total price:
+			<span class="snipcart-total-price"></span>
 		</div>
 	</div>
 </template>
@@ -53,6 +50,7 @@ export default {
 	}
 };
 </script>
+
 
 <style>
 .product {
