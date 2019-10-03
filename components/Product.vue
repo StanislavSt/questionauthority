@@ -1,52 +1,56 @@
 <template>
-	<div class="product" v-editable="blok">
-		<div class="product__images">
-			<div v-if="blok.images.length > 0">
-				<img
-					:src="selectedImage.filename || blok.images[0].filename"
-					:alt="selectedImage.name || blok.images[0].name"
-				/>
+	<div>
+		<Header />
+		<div class="product" v-editable="blok">
+			<div class="left">
+				<div class="product__description">
+					<div class="product__description" v-html="blok.description"></div>
+				</div>
 			</div>
-			<ul class="product__thumbs">
-				<li
-					class="product__thumb"
-					v-for="image in blok.images"
-					:key="image.filename"
-					@click="selectedImage = image"
-				>
-					<img class="product__thumb-image" :src="image.filename" :alt="image.name" />
-				</li>
-			</ul>
-		</div>
-		<div class="product__information">
-			<h1 class="product__headline">{{ blok.name }}</h1>
-			<div class="product__price">€ {{ blok.price }}</div>
-			<div class="product__description">{{ blok.description }}</div>
-		</div>
-		<button
-			class="snipcart-add-item"
-			:data-item-id="blok._uid"
-			:data-item-name="blok.name"
-			:data-item-price="blok.price"
-		>Consume</button>
-		<a href="#" class="snipcart-checkout">Click here to checkout</a>
-		<div>Lots of content</div>
-		<div class="snipcart-summary">
-			Number of items:
-			<span class="snipcart-total-items"></span>
-			Total price:
-			<span class="snipcart-total-price"></span>
+			<div class="mid">
+				<div v-if="blok.images.length > 0" class="product__images">
+					<div v-for="image in blok.images" :key="image.filename">
+						<img :src="image.filename" :alt="image.name " />
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="product__information">
+					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
+					<div class="product__price">€ {{ blok.price }}</div>
+					<button
+						class="snipcart-add-item"
+						:data-item-id="blok._uid"
+						:data-item-name="blok.name"
+						:data-item-price="blok.price"
+					>Consume</button>
+				</div>
+
+				<!--
+				<a href="#" class="snipcart-checkout">Click here to checkout</a>
+				<div>Lots of content</div>
+				<div class="snipcart-summary">
+					Number of items:
+					<span class="snipcart-total-items"></span>
+					Total price:
+					<span class="snipcart-total-price"></span>
+				</div>-->
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
 export default {
 	props: ["blok"],
 	data() {
 		return {
 			selectedImage: {}
 		};
+	},
+	components: {
+		Header
 	}
 };
 </script>
@@ -54,70 +58,64 @@ export default {
 
 <style>
 .product {
-	padding-top: 60px;
+	padding-top: 5rem;
 	margin: 0 auto;
 	max-width: 1000px;
 	display: flex;
-	flex-direction: row;
 }
-
-.product__thumbs {
-	margin-top: 50px;
+.product .left {
+	flex: 1;
+	justify-content: flex-start;
+	border: 1px dashed red;
 }
-
-.product__thumb {
-	display: inline-block;
-	padding-right: 10px;
-	list-style: none;
-	width: 55px;
-	margin-right: 10px;
-	padding: 5px;
-	border: 1px solid #ccc;
+.product .mid {
+	flex: 2;
+	border: 1px dashed red;
 }
-
-.product__thumb-image {
-	max-width: 100%;
+.product .mid div img {
+	display: block;
+	margin: auto;
 }
-
-.product__images {
-	margin: 0 0.5rem;
-	width: calc(100% / 3 * 2);
+.product .right {
+	flex: 1;
+	justify-content: flex-end;
+	border: 1px dashed red;
 }
 
 .product__information {
+	display: block;
 	margin: 0 0.5rem;
-	width: calc(100% / 3 * 1);
+	top: 60%;
+	position: absolute;
 }
 
 .product__price {
+	display: block;
 	font-size: 30px;
-	margin-top: 20px;
-	margin-bottom: 25px;
 }
 
 .product__description {
-	margin-bottom: 20px;
+	display: block;
+	top: 60%;
+	position: absolute;
 }
 
 .product__description h2 {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
-
 .snipcart-add-item {
 	appearance: none;
-	display: inline-block;
+	display: block;
 	padding: 15px 20px;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 18px;
 	background: #000;
 	color: #fff;
+	height: 3rem;
+	width: 10rem;
 }
-
-.alphachoice {
-	color: #000;
-	font-size: 80%;
-	display: inline-block;
-	padding-top: 5px;
+.snipcart-summary {
+	display: block;
 }
 </style>

@@ -665,6 +665,14 @@
     core-js "^2.6.5"
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime-corejs3@^7.4.5":
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.6.2.tgz#032d0ca5107747751bb31cbce2302f9a73bd824c"
+  integrity sha512-FX1ddj2gf7psgslvkkKeyxftnslUFDY9OHGnp+wJ+4JIKSEABB1fKVZiE7/2n+C9RVTPfPwpOqGmFf5TGvg0Bw==
+  dependencies:
+    core-js-pure "^3.0.0"
+    regenerator-runtime "^0.13.2"
+
 "@babel/runtime@^7.5.5":
   version "7.6.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.2.tgz#c3d6e41b304ef10dcf13777a33e7694ec4a9a6dd"
@@ -2204,6 +2212,11 @@ core-js-compat@^3.1.1:
   dependencies:
     browserslist "^4.6.6"
     semver "^6.3.0"
+
+core-js-pure@^3.0.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.2.1.tgz#879a23699cff46175bfd2d09158b5c50645a3c45"
+  integrity sha512-+qpvnYrsi/JDeQTArB7NnNc2VoMYLE1YSkziCDHgjexC2KH7OFiGhLUd3urxfyWmNjSwSW7NYXPWHMhuIJx9Ow==
 
 core-js@^2.4.0, core-js@^2.6.5:
   version "2.6.9"
@@ -4295,6 +4308,11 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+marked@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
+  integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -6487,6 +6505,15 @@ storyblok-js-client@^1.0.12:
   integrity sha512-w+UMrhlHnYt8hOP88hSX8t460SbA+1H4Q/FuMybYo5FtEMzRBT7+JJEvXXxE+DF/uRAWihRzfJFoK2n/rw5yqA==
   dependencies:
     "@babel/runtime-corejs2" "^7.4.2"
+    axios "^0.19.0"
+    qs "^6.5.2"
+
+storyblok-js-client@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-2.0.3.tgz#98b82ee772dc3d50d6740f7f906975a701b55029"
+  integrity sha512-4QaZf4Q2xKpYOPqCYF02jWrm6RG8sFYWmmFtHJ6AMHTJ8DiacGbcktA92cZ7+EcWnUJXiMi1xQJBlcpVQJW5Kw==
+  dependencies:
+    "@babel/runtime-corejs3" "^7.4.5"
     axios "^0.19.0"
     qs "^6.5.2"
 
