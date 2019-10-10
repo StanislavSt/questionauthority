@@ -17,7 +17,9 @@
 			<div class="right">
 				<div class="product__information">
 					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
-					<div class="product__price">€ {{ blok.price }}</div>
+					<div class="product__price">{{ blok.price }} EURO</div>
+					<div class="product__shipping">Shipping is at the customer's expense</div>
+					<div class="product__size">View Size Chart</div>
 					<button
 						class="snipcart-add-item"
 						:data-item-id="blok._uid"
@@ -60,7 +62,7 @@ export default {
 .product {
 	padding-top: 5rem;
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: 1100px;
 	display: flex;
 }
 .product .left {
@@ -83,15 +85,30 @@ export default {
 }
 
 .product__information {
-	display: block;
+	margin: 0 auto;
+	border: 1px dashed green;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	margin: 0 0.5rem;
-	top: 60%;
+	top: 55%;
 	position: absolute;
+	width: auto;
+}
+.product__information * {
+	padding-bottom: 0.5rem;
 }
 
-.product__price {
+.product__information .product__price {
 	display: block;
-	font-size: 30px;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.product__information .product__size {
+	font-size: 0.8rem;
+}
+.product__information .product__shipping {
+	font-size: 0.8rem;
 }
 
 .product__description {
@@ -105,15 +122,15 @@ export default {
 	margin-bottom: 10px;
 }
 .snipcart-add-item {
+	text-transform: uppercase;
 	appearance: none;
 	display: block;
-	padding: 15px 20px;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 1rem;
 	background: #000;
 	color: #fff;
-	height: 3rem;
-	width: 10rem;
+	height: 1.9rem;
+	width: 16rem;
 }
 .snipcart-summary {
 	display: block;
