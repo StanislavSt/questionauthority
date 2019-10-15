@@ -7,7 +7,11 @@ module.exports = {
       { accessToken: "GaHO0tre64SXQQg7uSv7GQtt", cacheProvider: "memory" }
     ]
   ],
-  plugins: ["~/plugins/components", "~/plugins/filters"],
+  plugins: [
+    "~/plugins/components",
+    "~/plugins/filters",
+    { src: "~/plugins/vue-scroll-magnet.js", ssr: false }
+  ],
   router: {
     middleware: "setCacheVersion"
   },
@@ -126,9 +130,5 @@ module.exports = {
   /*
    ** Build configuration
    */
-  build: {
-    /*
-     ** Run ESLint on save
-     */
-  }
+  build: {}
 };

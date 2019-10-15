@@ -15,7 +15,8 @@
     "marked": "^0.7.0",
     "nuxt": "^2.0.0",
     "storyblok-js-client": "^2.0.3",
-    "storyblok-nuxt": "1.0.0"
+    "storyblok-nuxt": "1.0.0",
+    "vue-scroll-magnet": "^0.3.7"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

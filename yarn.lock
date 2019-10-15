@@ -7218,6 +7218,11 @@ vue-router@~3.0.7:
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.7.tgz#b36ca107b4acb8ff5bc4ff824584059c23fcb87b"
   integrity sha512-utJ+QR3YlIC/6x6xq17UMXeAfxEvXA0VKD3PiSio7hBOZNusA1jXcbxZxVEfJunLp48oonjTepY8ORoIlRx/EQ==
 
+vue-scroll-magnet@^0.3.7:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/vue-scroll-magnet/-/vue-scroll-magnet-0.3.7.tgz#7a14cabba4535eecc52c52efd7ce396c821ab606"
+  integrity sha1-ehTKu6RTXuzFLFLv1845bIIatgY=
+
 vue-server-renderer@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.6.10.tgz#cb2558842ead360ae2ec1f3719b75564a805b375"
