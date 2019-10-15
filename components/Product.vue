@@ -3,8 +3,15 @@
 		<Header />
 		<div class="product" v-editable="blok">
 			<div class="left">
-				<div class="product__description">
-					<div class="product__description" v-html="blok.description"></div>
+				<div class="product__information">
+					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
+					<div class="product__price">Description</div>
+					<div
+						class="product__shipping"
+					>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div>
+					<div
+						class="product__size"
+					>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, mak</div>
 				</div>
 			</div>
 			<div class="mid">
@@ -14,23 +21,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="right" style="height">
-				<scroll-magnet-container>
-					<scroll-magnet-item>
-						<div class="product__information">
-							<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
-							<div class="product__price">{{ blok.price }} EURO</div>
-							<div class="product__shipping">Shipping is at the customer's expense</div>
-							<div class="product__size">View Size Chart</div>
-							<button
-								class="snipcart-add-item"
-								:data-item-id="blok._uid"
-								:data-item-name="blok.name"
-								:data-item-price="blok.price"
-							>Consume</button>
-						</div>
+			<div class="right">
+				<div class="product__information">
+					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
+					<div class="product__price">{{ blok.price }} EURO</div>
+					<div class="product__shipping">Shipping is at the customer's expense</div>
+					<div class="product__size">View Size Chart</div>
+					<button
+						class="snipcart-add-item"
+						:data-item-id="blok._uid"
+						:data-item-name="blok.name"
+						:data-item-price="blok.price"
+					>Consume</button>
+				</div>
 
-						<!--
+				<!--
 				<a href="#" class="snipcart-checkout">Click here to checkout</a>
 				<div>Lots of content</div>
 				<div class="snipcart-summary">
@@ -38,11 +43,12 @@
 					<span class="snipcart-total-items"></span>
 					Total price:
 					<span class="snipcart-total-price"></span>
-						</div>-->
-					</scroll-magnet-item>
-				</scroll-magnet-container>
+				</div>-->
 			</div>
 		</div>
+		<Header />
+		<Header />
+		<Header />
 	</div>
 </template>
 
@@ -72,11 +78,9 @@ export default {
 .product .left {
 	flex: 1;
 	justify-content: flex-start;
-	border: 1px dashed red;
 }
 .product .mid {
 	flex: 2;
-	border: 1px dashed red;
 }
 .product .mid div img {
 	display: block;
@@ -85,18 +89,18 @@ export default {
 .product .right {
 	flex: 1;
 	justify-content: flex-end;
-	border: 1px dashed red;
 }
 
 .product__information {
 	margin: 0 auto;
-	border: 1px dashed green;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin: 0 0.5rem;
-	top: 55%;
-	position: absolute;
+	margin: 0 0.5rem 5rem;
+	top: 40%;
+	min-height: 20rem;
+	position: -webkit-sticky;
+	position: sticky;
 	width: auto;
 }
 .product__information * {
@@ -118,7 +122,8 @@ export default {
 .product__description {
 	display: block;
 	top: 60%;
-	position: absolute;
+	position: -webkit-sticky;
+	position: sticky;
 }
 
 .product__description h2 {

@@ -7,11 +7,7 @@ module.exports = {
       { accessToken: "GaHO0tre64SXQQg7uSv7GQtt", cacheProvider: "memory" }
     ]
   ],
-  plugins: [
-    "~/plugins/components",
-    "~/plugins/filters",
-    { src: "~/plugins/vue-scroll-magnet.js", ssr: false }
-  ],
+  plugins: ["~/plugins/components", "~/plugins/filters"],
   router: {
     middleware: "setCacheVersion"
   },
