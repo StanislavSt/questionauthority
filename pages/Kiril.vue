@@ -2,11 +2,13 @@
 	<div>
 		<Header />
 		<div class="gallery">
-			<img class="image" src="@/assets/QA3.jpg" alt />
-			<img class="image" src="@/assets/QAINSTA1.jpg" alt />
-			<img class="image" src="@/assets/QAFB3.jpg" alt />
-			<img class="image" src="@/assets/QAINSTA2.jpg" alt />
-			<img class="image" src="@/assets/QAINSTA3.jpg" alt />
+			<img class="image" src="@/assets/Kiril1.jpg" alt />
+			<img class="image" src="@/assets/Kiril2.jpg" alt />
+			<img class="image" src="@/assets/Kiril6.jpg" alt />
+			<img class="image" src="@/assets/Kiril4.jpg" alt />
+			<img class="image" src="@/assets/Kiril5.jpg" alt />
+
+			<img class="image" src="@/assets/Kiril7.jpg" alt />
 		</div>
 		<Footer />
 	</div>

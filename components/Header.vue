@@ -29,6 +29,11 @@ export default {};
 </script>
 
 <style scoped>
+.logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .logo-container img {
 	padding: 4rem 0 0 0;
 	display: block;

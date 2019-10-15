@@ -2,18 +2,6 @@
 	<div>
 		<Header />
 		<div class="product" v-editable="blok">
-			<div class="left">
-				<div class="product__information">
-					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
-					<div class="product__price">Description</div>
-					<div
-						class="product__shipping"
-					>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div>
-					<div
-						class="product__size"
-					>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, mak</div>
-				</div>
-			</div>
 			<div class="mid">
 				<div v-if="blok.images.length > 0" class="product__images">
 					<div v-for="image in blok.images" :key="image.filename">
@@ -33,6 +21,16 @@
 						:data-item-name="blok.name"
 						:data-item-price="blok.price"
 					>Consume</button>
+					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
+					<div class="product__description">
+						<div class="product__price">Description</div>
+						<div
+							class="product__shipping"
+						>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div>
+						<div
+							class="product__size"
+						>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, mak</div>
+					</div>
 				</div>
 
 				<!--
@@ -46,14 +44,13 @@
 				</div>-->
 			</div>
 		</div>
-		<Header />
-		<Header />
-		<Header />
+		<Footer />
 	</div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 export default {
 	props: ["blok"],
 	data() {
@@ -62,7 +59,8 @@ export default {
 		};
 	},
 	components: {
-		Header
+		Header,
+		Footer
 	}
 };
 </script>
@@ -96,9 +94,9 @@ export default {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin: 0 0.5rem 5rem;
-	top: 40%;
-	min-height: 20rem;
+	margin: 0 0.5rem 1rem;
+	top: 35%;
+
 	position: -webkit-sticky;
 	position: sticky;
 	width: auto;
@@ -121,9 +119,7 @@ export default {
 
 .product__description {
 	display: block;
-	top: 60%;
-	position: -webkit-sticky;
-	position: sticky;
+	padding-top: 5rem;
 }
 
 .product__description h2 {

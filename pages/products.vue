@@ -15,6 +15,7 @@
 				</li>
 			</ul>
 		</div>
+		<Footer />
 	</div>
 </template>
 
@@ -23,12 +24,14 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 export default {
 	data() {
 		return { stories: [] };
 	},
 	components: {
-		Header
+		Header,
+		Footer
 	},
 	asyncData(context) {
 		// Check if we are in the editing mode
