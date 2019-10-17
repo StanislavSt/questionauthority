@@ -79,12 +79,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .products {
+	display: flex;
+	justify-content: center;
 	padding-top: 5rem;
-	margin: 0 auto;
-	max-width: 80%;
-	padding-left: 4rem;
+	max-width: 100%;
 }
 
 .overview {
@@ -98,28 +98,39 @@ export default {
 }
 
 .overview__item {
-	margin: 0 0.5rem;
-	list-style: none;
+	display: flex;
+	width: auto;
+	justify-content: center;
+	align-items: center;
 }
 
 .overview__item-inner {
+	display: flex;
+	justify-content: center;
 	padding: 0.5rem;
-	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	text-decoration: none;
 	color: #000;
 	display: block;
 	max-width: 100%;
 }
 .overview__item-inner img {
-	width: 18rem;
-	height: 18rem;
+	max-width: 100%;
+	max-height: 100%;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+}
+.overview__item-inner img:hover {
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(0%);
+	opacity: 0.92;
+	transition: all 0.2s ease-in-out;
 }
 .overview__item-inner .product-name {
-	display: flex;
-	justify-content: center;
-	max-width: 70%;
 	text-transform: uppercase;
+	text-align: center;
 	font-size: 14px;
-	padding-top: 3rem;
+	min-width: 100%;
 }
 </style>

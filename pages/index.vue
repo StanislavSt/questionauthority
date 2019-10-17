@@ -1,24 +1,35 @@
 <template>
 	<div>
 		<Header />
-		<div class="image-container">
-			<nuxt-link to="/Kiril">
-				<img src="@/assets/Kiril_Art.jpg" alt />
-			</nuxt-link>
-			<div class="image-description">
-				<div class="item">Question Authority</div>
-				<div class="item">X</div>
-				<div class="item">Kiril kiryakov</div>
+		<div class="container">
+			<div class="embed-container">
+				<iframe
+					src="https://player.vimeo.com/video/367024729?color=ff9933&title=0&byline=0&portrait=0"
+					frameborder="0"
+					webkitAllowFullScreen
+					mozallowfullscreen
+					allowfullscreen
+				></iframe>
 			</div>
-		</div>
-		<div class="image-container">
-			<nuxt-link to="/SavageRavage">
-				<img src="@/assets/SavageRavage.jpg" alt />
-			</nuxt-link>
-			<div class="image-description">
-				<div class="item">Question Authority</div>
-				<div class="item">X</div>
-				<div class="item">Savage Ravage</div>
+			<div class="image-container">
+				<nuxt-link to="/Kiril">
+					<img src="@/assets/Kiril_Art.jpg" alt />
+				</nuxt-link>
+				<div class="image-description">
+					<div class="item">Question Authority</div>
+					<div class="item">X</div>
+					<div class="item">Kiril kiryakov</div>
+				</div>
+			</div>
+			<div class="image-container">
+				<nuxt-link to="/SavageRavage">
+					<img src="@/assets/SavageRavage.jpg" alt />
+				</nuxt-link>
+				<div class="image-description">
+					<div class="item">Question Authority</div>
+					<div class="item">X</div>
+					<div class="item">Savage Ravage</div>
+				</div>
 			</div>
 		</div>
 		<Footer />
@@ -40,15 +51,38 @@ export default {
 </script>
 
 <style scoped>
-.image-container {
-	padding: 5rem 5rem 10rem 5rem;
+.container {
+	padding-top: 5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	width: auto;
+	grid-gap: 3rem;
+}
+.image-container {
+	object-fit: cover;
+	grid-column: auto / span 1;
+	max-height: 100%;
+	padding: 4rem 0 3rem 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
 	text-align: center;
 }
 .image-container img {
-	width: 30%;
+	width: 100%;
+	transition: opacity 0.4s ease-out;
+	-moz-transition: opacity 0.4s ease-out;
+	-webkit-transition: opacity 0.4s ease-out;
+	-o-transition: opacity 0.4s ease-out;
+}
+.image-container img:hover {
+	opacity: 0.6;
+	transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
 }
 .image-container .image-description {
 	display: flex;
@@ -63,5 +97,25 @@ export default {
 	justify-content: space-between;
 	text-transform: uppercase;
 	font-size: 12px;
+}
+
+/* Vimeo embed settings */
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	grid-column: auto / span 2;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 </style>
