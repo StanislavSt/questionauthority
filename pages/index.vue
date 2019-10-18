@@ -36,12 +36,6 @@
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
-				<img class="image" src="@/assets/Pictures/Pic1.jpg" alt />
-			</a>
-
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
 				<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
 			</a>
 			<a
@@ -49,6 +43,12 @@
 			>
 				<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
 			</a>
+			<a
+				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+			>
+				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
+			</a>
+
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
@@ -62,12 +62,12 @@
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
-				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
+				<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
 			</a>
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
-				<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
+				<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
 			</a>
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
@@ -79,11 +79,10 @@
 			>
 				<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
 			</a>
-
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
-				<img class="image" src="@/assets/Pictures/Pic1.jpg" alt />
+				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
 			</a>
 		</div>
 		<Footer />
@@ -122,10 +121,12 @@ export default {
 	filter: grayscale(100%);
 	width: 100%;
 	height: 100%;
+	transition: filter 0.5s;
 }
 .container-gallery img:hover {
 	-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
 	filter: grayscale(0) saturate(150%);
+	transition: filter 0.5s;
 }
 .container {
 	padding-top: 5rem;
