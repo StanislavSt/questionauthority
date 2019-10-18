@@ -120,16 +120,20 @@ export default {
 }
 .overview__item-inner img {
 	max-width: 100%;
-	max-height: 100%;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(100%);
-	opacity: 0.8;
+	max-height: 20rem;
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(0%) contrast(120%);
+
+	opacity: 1;
+	transition: filter 0.5s;
+	transition: opacity 0.5s;
 }
 .overview__item-inner img:hover {
-	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(0%) contrast(170%);
-	opacity: 1;
-	transition: all 0.2s ease-in-out;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+	opacity: 0.7;
+	transition: filter 0.5s ease;
+	transition: opacity 0.5s;
 }
 .overview__item-inner .product-name {
 	font-family: "Barlow", sans-serif;

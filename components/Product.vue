@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="product animated fadeInUp" v-editable="blok">
+		<div class="product animated fadeInUp delay-0.1s" v-editable="blok">
 			<div class="left">
 				<div class="product__information">
 					<div class="product__price">Description</div>
