@@ -70,7 +70,7 @@ export default {
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
 
 .product {
-	padding-top: 5rem;
+	padding: 10rem 0 5rem 0;
 	margin: 0 auto;
 	max-width: 1100px;
 	display: flex;
@@ -128,6 +128,9 @@ export default {
 .product__description h2 {
 	margin-top: 20px;
 	margin-bottom: 10px;
+}
+.product__images img {
+	padding-bottom: 5rem;
 }
 .snipcart-add-item {
 	text-transform: uppercase;

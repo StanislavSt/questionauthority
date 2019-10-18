@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="gallery">
+		<div class="gallery animated fadeIn">
 			<img class="image" src="@/assets/Kiril1.jpg" alt />
 			<img class="image" src="@/assets/Kiril2.jpg" alt />
 			<img class="image" src="@/assets/Kiril6.jpg" alt />
@@ -25,6 +25,7 @@ export default {
 </script>
 <style scoped>
 .gallery {
+	visibility: hidden;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 1rem;

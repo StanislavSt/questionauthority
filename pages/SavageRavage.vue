@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="video-container">
+		<div class="video-container animated fadeIn delay-0.5s">
 			<div class="video-title">Savage Ravage</div>
 			<iframe
 				src="https://player.vimeo.com/video/367024729?color=ff9933&title=0&byline=0&portrait=0"

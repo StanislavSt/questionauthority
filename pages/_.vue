@@ -1,9 +1,5 @@
 <template>
 	<div>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
-		/>
 		<component
 			v-if="story.content.component"
 			:key="story.content._uid"
@@ -89,3 +85,6 @@ export default {
 	}
 };
 </script>
+<style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+</style>

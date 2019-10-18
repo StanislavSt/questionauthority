@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="video-container">
+		<div class="video-container animated fadeIn delay-0.5s">
 			<div class="video-title">concert i</div>
 			<iframe
 				width="900"

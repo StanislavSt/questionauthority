@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="gallery">
+		<div class="gallery animated fadeInUp fast">
 			<img class="image" src="@/assets/QA3.jpg" alt />
 			<img class="image" src="@/assets/QAINSTA1.jpg" alt />
 			<img class="image" src="@/assets/QAFB3.jpg" alt />
@@ -22,7 +22,11 @@ export default {
 };
 </script>
 <style scoped>
+.animated {
+	animation-fill-mode: forwards;
+}
 .gallery {
+	animation-fill-mode: both;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 1rem;

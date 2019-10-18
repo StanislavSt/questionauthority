@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="container animated fadeIn delay-0.2s">
+		<div class="container animated fadeIn">
 			<div class="embed-container">
 				<iframe
 					src="https://player.vimeo.com/video/367024729?color=ff9933&title=0&byline=0&portrait=0"
