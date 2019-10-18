@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="gallery animated fadeInUp fast">
+		<div class="gallery animated fadeIn fast">
 			<img class="image" src="@/assets/QA3.jpg" alt />
 			<img class="image" src="@/assets/QAINSTA1.jpg" alt />
 			<img class="image" src="@/assets/QAFB3.jpg" alt />

@@ -26,6 +26,9 @@ export default {
 };
 </script>
 <style scoped>
+* {
+	background: black;
+}
 .video-container {
 	padding-top: 5rem;
 	text-align: center;

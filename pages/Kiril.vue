@@ -25,7 +25,6 @@ export default {
 </script>
 <style scoped>
 .gallery {
-	visibility: hidden;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 1rem;
