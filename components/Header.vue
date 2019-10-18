@@ -67,14 +67,14 @@ export default {
 }
 
 .sticky .logo-container {
-	margin: 0rem 0 0 2rem;
+	padding: 0rem 0 0 2rem;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
 }
 .fixed .logo-container {
-	margin: 0rem 0 0 1rem;
+	padding: 1rem 0 0 1rem;
 	transform: scale(0.85);
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
