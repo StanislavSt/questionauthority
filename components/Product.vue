@@ -2,15 +2,6 @@
 	<div>
 		<Header />
 		<div class="product animated fadeInUp delay-0.1s" v-editable="blok">
-			<div class="left">
-				<div class="product__information">
-					<div class="product__price">Description</div>
-					<div
-						class="product__shipping"
-					>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div>
-					<div class="product__size">End</div>
-				</div>
-			</div>
 			<div class="mid">
 				<div v-if="blok.images.length > 0" class="product__images">
 					<div v-for="image in blok.images" :key="image.filename">
@@ -30,6 +21,13 @@
 						:data-item-name="blok.name"
 						:data-item-price="blok.price"
 					>Consume</button>
+					<div class="product__information">
+						<div class="product__price">Description</div>
+						<div
+							class="product__shipping"
+						>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div>
+						<div class="product__size">End</div>
+					</div>
 					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
 				</div>
 
@@ -68,7 +66,8 @@ export default {
 
 <style scoped>
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
-
+* {
+}
 .product {
 	padding: 10rem 0 5rem 0;
 	margin: 0 auto;
@@ -97,9 +96,9 @@ export default {
 	align-items: center;
 	flex-direction: column;
 	margin: 0 0.5rem 1rem;
-	top: 35%;
+	top: 25%;
 	padding-top: 3rem;
-	min-height: 25rem;
+	min-height: 20rem;
 	position: -webkit-sticky;
 	position: sticky;
 	width: auto;
