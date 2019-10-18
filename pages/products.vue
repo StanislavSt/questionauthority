@@ -120,11 +120,12 @@ export default {
 	max-height: 100%;
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
+	opacity: 0.8;
 }
 .overview__item-inner img:hover {
 	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(0%);
-	opacity: 0.92;
+	opacity: 1;
 	transition: all 0.2s ease-in-out;
 }
 .overview__item-inner .product-name {

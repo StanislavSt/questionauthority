@@ -38,11 +38,7 @@
 			>
 				<img class="image" src="@/assets/Pictures/Pic1.jpg" alt />
 			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
-			</a>
+
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
@@ -56,24 +52,38 @@
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
+				<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
+			</a>
+			<a
+				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+			>
 				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
 			</a>
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
-				<img class="image" src="@/assets/Pictures/Pic7.jpg" alt />
+				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
+			</a>
+			<a
+				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+			>
+				<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
+			</a>
+			<a
+				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+			>
+				<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
+			</a>
+			<a
+				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+			>
+				<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
 			</a>
 
 			<a
 				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 			>
-				<img class="image" src="@/assets/Pictures/Pic8.jpg" alt />
-			</a>
-
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic9.jpg" alt />
+				<img class="image" src="@/assets/Pictures/Pic1.jpg" alt />
 			</a>
 		</div>
 		<Footer />
@@ -99,15 +109,15 @@ export default {
 	padding-top: 9rem;
 	max-width: 50%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	margin-left: auto;
 	margin-right: auto;
 }
 .container-gallery img {
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
-	width: 100%;
-	max-height: 9.5rem;
+	width: 177px;
+	height: 177px;
 }
 .container-gallery img:hover {
 	-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
