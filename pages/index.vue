@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="container">
+		<div class="container animated fadeIn delay-0.2s">
 			<div class="embed-container">
 				<iframe
 					src="https://player.vimeo.com/video/367024729?color=ff9933&title=0&byline=0&portrait=0"
@@ -105,23 +105,27 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
 .container-gallery {
 	padding-top: 9rem;
 	max-width: 50%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	justify-content: center;
+
+	grid-template-columns: 8vw 8vw 8vw 8vw 8vw;
+	grid-template-rows: repeat(2, 8vw);
 	margin-left: auto;
 	margin-right: auto;
 }
 .container-gallery img {
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
-	width: 177px;
-	height: 177px;
+	width: 100%;
+	height: 100%;
 }
 .container-gallery img:hover {
 	-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
-	filter: grayscale(0);
+	filter: grayscale(0) saturate(150%);
 }
 .container {
 	padding-top: 5rem;

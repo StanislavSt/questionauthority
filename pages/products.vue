@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="products">
+		<div class="products animated fadeIn delay-0.2s">
 			<ul class="overview">
 				<li class="overview__item" v-for="product in stories" :key="product.full_slug">
 					<nuxt-link class="overview__item-inner" :to="'/' + product.full_slug">
@@ -80,6 +80,9 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Barlow&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+
 .products {
 	display: flex;
 	justify-content: center;
@@ -90,7 +93,7 @@ export default {
 .overview {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1rem;
+	grid-gap: 5rem;
 	margin: 0px;
 	padding: 0px;
 	margin-top: 20px;
@@ -124,14 +127,15 @@ export default {
 }
 .overview__item-inner img:hover {
 	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(0%);
+	filter: grayscale(0%) contrast(170%);
 	opacity: 1;
 	transition: all 0.2s ease-in-out;
 }
 .overview__item-inner .product-name {
+	font-family: "Barlow", sans-serif;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 14px;
+	font-size: 12px;
 	min-width: 100%;
 }
 </style>

@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "animate.css": "^3.7.2",
     "cross-env": "^5.2.0",
     "marked": "^0.7.0",
     "nuxt": "^2.0.0",

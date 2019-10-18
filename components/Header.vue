@@ -25,8 +25,6 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="bottom">Content</div>
 	</div>
 </template>
 <script>
@@ -60,8 +58,8 @@ export default {
 	font-size: 32px;
 	top: 0;
 	width: 100%;
-	height: auto;
-	padding: 1em 0;
+	height: 1rem;
+	padding: 1rem 0;
 	color: white;
 	text-align: center;
 	transition: all 0.2s ease;
@@ -69,14 +67,14 @@ export default {
 }
 
 .sticky .logo-container {
+	margin: 0rem 0 0 2rem;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
 }
 .fixed .logo-container {
-	margin: 0;
-	padding: 0;
+	margin: 0rem 0 0 1rem;
 	transform: scale(0.85);
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -86,11 +84,11 @@ export default {
 }
 
 .fixed {
-	margin: 0;
+	margin-top: 0;
 	padding: 0;
 	font-size: 24px;
 	position: fixed;
-
+	top: 0;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
@@ -130,7 +128,7 @@ body {
 }
 .logo-container img {
 	justify-content: flex-start;
-	padding: 0rem 0 0 0;
+
 	max-width: 100%;
 	height: auto;
 	width: 10rem;

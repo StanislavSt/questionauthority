@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="product" v-editable="blok">
+		<div class="product animated fadeInUp" v-editable="blok">
 			<div class="left">
 				<div class="product__information">
 					<div class="product__price">Description</div>
@@ -67,6 +67,8 @@ export default {
 
 
 <style scoped>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+
 .product {
 	padding-top: 5rem;
 	margin: 0 auto;
