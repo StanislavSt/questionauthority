@@ -7,7 +7,11 @@ module.exports = {
       { accessToken: "GaHO0tre64SXQQg7uSv7GQtt", cacheProvider: "memory" }
     ]
   ],
-  plugins: ["~/plugins/components", "~/plugins/filters"],
+  plugins: [
+    "~/plugins/components",
+    "~/plugins/filters",
+    { src: "~/plugins/vue-product-zoomer", mode: "client" }
+  ],
   router: {
     middleware: "setCacheVersion"
   },

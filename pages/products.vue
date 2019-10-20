@@ -10,7 +10,7 @@
 							:src="product.content.images[0].filename | resize('300x0')"
 							:alt="product.content.images[0].name"
 						/>
-						<div class="product-name">{{product.content.name}}</div>
+						<div class="product-name">€{{product.content.price}}</div>
 					</nuxt-link>
 				</li>
 			</ul>
