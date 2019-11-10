@@ -10,17 +10,11 @@
 			<div class="navigation-container">
 				<div class="topnav">
 					<div class="item">
-						<nuxt-link to="/media">Media</nuxt-link>
-					</div>
-					<div class="item">
 						<nuxt-link to="/products">shop</nuxt-link>
 					</div>
 
 					<div class="item">
 						<a href="/about">About</a>
-					</div>
-					<div class="item">
-						<a href="/world">World</a>
 					</div>
 				</div>
 			</div>

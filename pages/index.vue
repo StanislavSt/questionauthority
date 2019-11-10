@@ -2,7 +2,7 @@
 	<div>
 		<Header />
 		<div class="container animated fadeIn">
-			<div class="embed-container">
+			<!--<div class="embed-container">
 				<iframe
 					src="https://player.vimeo.com/video/367024729?color=ff9933&title=0&byline=0&portrait=0"
 					frameborder="0"
@@ -10,20 +10,20 @@
 					mozallowfullscreen
 					allowfullscreen
 				></iframe>
-			</div>
+			</div>-->
 			<div class="image-container">
-				<nuxt-link to="/Kiril">
-					<img src="@/assets/Kiril_Art.jpg" alt />
+				<nuxt-link to="/SavageRavage">
+					<img src="@/assets/QAINSTA1.jpg" alt />
 				</nuxt-link>
 				<div class="image-description">
 					<div class="item">Question Authority</div>
 					<div class="item">X</div>
-					<div class="item">Kiril kiryakov</div>
+					<div class="item">Savage Ravage</div>
 				</div>
 			</div>
 			<div class="image-container">
 				<nuxt-link to="/SavageRavage">
-					<img src="@/assets/SavageRavage.jpg" alt />
+					<img src="@/assets/QAINSTA1.jpg" alt />
 				</nuxt-link>
 				<div class="image-description">
 					<div class="item">Question Authority</div>
@@ -132,14 +132,14 @@ export default {
 	padding-top: 5rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	max-width: 50%;
+	max-width: 40%;
 	margin-left: auto;
 	margin-right: auto;
 	grid-gap: 3rem;
 }
 .image-container {
 	object-fit: cover;
-	grid-column: auto / span 1;
+	grid-column: auto / span 2;
 	max-height: 100%;
 	padding: 4rem 0 3rem 0;
 	margin-left: auto;
@@ -163,17 +163,16 @@ export default {
 }
 .image-container .image-description {
 	display: flex;
-	justify-content: space-between;
-	width: 450px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 29.5%;
+	justify-content: center;
+	width: auto;
 	padding-top: 0.5rem;
 }
 .image-container .image-description .item {
 	justify-content: space-between;
 	text-transform: uppercase;
 	font-size: 12px;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 /* Vimeo embed settings */
