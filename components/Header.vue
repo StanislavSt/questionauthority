@@ -10,11 +10,7 @@
 			<div class="navigation-container">
 				<div class="topnav">
 					<div class="item">
-						<nuxt-link to="/products">shop</nuxt-link>
-					</div>
-
-					<div class="item">
-						<a href="/about">About</a>
+						<nuxt-link to="/products">CONSUME</nuxt-link>
 					</div>
 				</div>
 			</div>
@@ -106,11 +102,6 @@ body {
 	margin: 0;
 }
 
-:root {
-	height: 1000%;
-	font-family: sans-serif;
-}
-
 /* Original */
 /* Original */
 /* Original */
@@ -122,10 +113,12 @@ body {
 }
 .logo-container img {
 	justify-content: flex-start;
-
-	max-width: 100%;
-	height: auto;
-	width: 10rem;
+	width: auto;
+	height: 4rem;
+}
+.logo-container img:hover {
+	opacity: 0.7;
+	filter: alpha(opacity=70); /* For IE8 and earlier */
 }
 .navigation-container .topnav {
 	justify-content: flex-end;
@@ -136,12 +129,13 @@ body {
 }
 /* Style the links inside the navigation bar */
 .topnav .item a {
-	font-family: "Barlow", sans-serif;
 	flex: 1;
 	color: black;
 	text-align: center;
 	text-decoration: none;
-	font-size: 13px;
+	font-family: "Raleway", sans-serif;
+	font-size: 22px;
+	font-weight: bold;
 	text-transform: uppercase;
 	margin: 0 2rem 0.3% 2rem;
 }
@@ -151,7 +145,6 @@ body {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-	border-bottom: solid 1px;
-	color: rgba(0, 0, 0, 0.425);
+	color: rgba(0, 0, 0, 0.625);
 }
 </style>

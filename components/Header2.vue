@@ -23,22 +23,27 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	height: 4rem;
 	position: fixed;
 	top: 0;
+	z-index: 999;
 }
 .sticky div {
 	font-family: "Raleway", sans-serif;
 	font-size: 22px;
 	font-weight: bold;
+	margin: 0 2rem 0.3% 2rem;
 }
 .logo-container {
-	display: flex;
+	text-align: center;
+	display: block;
 }
 .logo-container img {
-	justify-content: flex-start;
-
-	max-width: 100%;
-	height: auto;
-	width: 10rem;
+	width: auto;
+	height: 100%;
+}
+.logo-container img:hover {
+	opacity: 0.7;
+	filter: alpha(opacity=70); /* For IE8 and earlier */
 }
 </style>

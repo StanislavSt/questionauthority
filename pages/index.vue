@@ -13,7 +13,7 @@
 			</div>-->
 			<div class="image-container">
 				<nuxt-link to="/SavageRavage">
-					<img src="@/assets/QAINSTA1.jpg" alt />
+					<img src="@/assets/SavageRavage.png" alt />
 				</nuxt-link>
 				<div class="image-description">
 					<div class="item">Question Authority</div>
