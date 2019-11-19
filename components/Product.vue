@@ -165,6 +165,7 @@ export default {
 }
 .product__images img {
 	padding-bottom: 5rem;
+	max-width: 45rem;
 }
 .snipcart-add-item {
 	text-transform: uppercase;

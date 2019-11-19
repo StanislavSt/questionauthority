@@ -16,9 +16,15 @@
 					<img src="@/assets/SavageRavage.png" alt />
 				</nuxt-link>
 				<div class="image-description">
-					<div class="item">Question Authority</div>
-					<div class="item">X</div>
-					<div class="item">Savage Ravage</div>
+					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
+				</div>
+			</div>
+			<div class="image-container">
+				<nuxt-link to="/SavageRavage">
+					<img src="@/assets/QA_WhiteTee.jpg" alt />
+				</nuxt-link>
+				<div class="image-description">
+					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
 				</div>
 			</div>
 			<div class="image-container">
@@ -26,9 +32,7 @@
 					<img src="@/assets/QAINSTA1.jpg" alt />
 				</nuxt-link>
 				<div class="image-description">
-					<div class="item">Question Authority</div>
-					<div class="item">X</div>
-					<div class="item">Savage Ravage</div>
+					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
 				</div>
 			</div>
 		</div>
@@ -145,10 +149,12 @@ export default {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
+	min-width: 35rem;
 	text-align: center;
 }
 .image-container img {
 	width: 100%;
+
 	transition: opacity 0.4s ease-out;
 	-moz-transition: opacity 0.4s ease-out;
 	-webkit-transition: opacity 0.4s ease-out;
@@ -168,11 +174,11 @@ export default {
 	padding-top: 0.5rem;
 }
 .image-container .image-description .item {
-	justify-content: space-between;
+	white-space: pre;
+	background: black;
+	color: white;
 	text-transform: uppercase;
 	font-size: 12px;
-	margin-left: 1rem;
-	margin-right: 1rem;
 }
 
 /* Vimeo embed settings */

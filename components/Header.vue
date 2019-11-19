@@ -7,13 +7,7 @@
 					<img src="@/assets/QA_Logo.png" alt />
 				</nuxt-link>
 			</div>
-			<!--<div class="navigation-container">
-				<div class="topnav">
-					<div class="item">
-						<nuxt-link to="/products">CONSUME</nuxt-link>
-					</div>
-				</div>
-			</div>-->
+			<div class="consume-container">CONSUME</div>
 		</div>
 	</div>
 </template>

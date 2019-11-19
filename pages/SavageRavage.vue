@@ -17,7 +17,7 @@
 				<nuxt-link class="overview__item-inner" :to="'/' + product.full_slug">
 					<img
 						v-if="product.content.images.length > 0"
-						:src="product.content.images[0].filename | resize('400x0')"
+						:src="product.content.images[0].filename"
 						:alt="product.content.images[0].name"
 					/>
 					<div class="product-price">€{{product.content.price}}</div>
@@ -29,7 +29,7 @@
 				<nuxt-link class="overview__item-inner" :to="'/' + product.full_slug">
 					<img
 						v-if="product.content.images.length > 0"
-						:src="product.content.images[0].filename | resize('200x0')"
+						:src="product.content.images[0].filename"
 						:alt="product.content.images[0].name"
 					/>
 					<div class="product-price">€{{product.content.price}}</div>
@@ -38,7 +38,7 @@
 		</div>
 		<div
 			class="information-container"
-		>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div>
+		>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
 		<Footer />
 	</div>
 </template>
@@ -99,6 +99,7 @@ export default {
 };
 </script>
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 .video-container {
 	padding-top: 10rem;
 	text-align: center;
@@ -108,8 +109,16 @@ export default {
 	padding-top: 5rem;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
-	justify-content: space-between;
+	width: 40%;
+	justify-content: center;
+}
+.products .overview__item {
+	max-width: 50%;
+}
+.products img {
+	object-fit: cover;
+	width: 100%;
+	min-height: 90%;
 }
 .small-products {
 	padding-top: 5rem;
@@ -122,17 +131,25 @@ export default {
 	grid-template-rows: repeat(2, 16rem);
 }
 .small-products img {
+	padding: 2rem;
 	display: block;
 	margin: auto;
+	object-fit: cover;
+	width: 100%;
+	min-height: 100%;
 }
 .product-price {
 	text-align: center;
 	font-size: 16px;
 }
 .information-container {
+	font-family: "Raleway", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
 	padding-top: 5rem;
 	width: 30%;
 	margin: auto;
+	text-align: center;
 }
 .video-container .video-title {
 	font-size: 2rem;
