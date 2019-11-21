@@ -51,6 +51,7 @@ a:visited {
 }
 a:link {
 	text-decoration: none;
+	color: white;
 }
 a:hover {
 	opacity: 0.8;
