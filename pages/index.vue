@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header />
+		<Header2 />
 		<div class="container animated fadeIn">
 			<!--<div class="embed-container">
 				<iframe
@@ -11,6 +11,14 @@
 					allowfullscreen
 				></iframe>
 			</div>-->
+			<div class="image-container">
+				<nuxt-link to="/absolute-comfort">
+					<img src="@/assets/QA_Comfort.png" alt />
+				</nuxt-link>
+				<div class="image-description">
+					<div class="item">Question Authority - Absolute Comfort</div>
+				</div>
+			</div>
 			<div class="image-container">
 				<nuxt-link to="/SavageRavage">
 					<img src="@/assets/SavageRavage.png" alt />
@@ -24,15 +32,16 @@
 					<img src="@/assets/QA_WhiteTee.jpg" alt />
 				</nuxt-link>
 				<div class="image-description">
-					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
+					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Kiril Kiryakov</div>
 				</div>
 			</div>
+
 			<div class="image-container">
 				<nuxt-link to="/SavageRavage">
 					<img src="@/assets/QAINSTA1.jpg" alt />
 				</nuxt-link>
 				<div class="image-description">
-					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
+					<div class="item">Question Authority - Concept I</div>
 				</div>
 			</div>
 		</div>
@@ -89,19 +98,25 @@
 				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
 			</a>
 		</div>
+		<div
+			class="information-container"
+		>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+		<div class="signature">
+			<img src="@/assets/QA_Signature.png" alt />
+		</div>
 		<Footer />
 	</div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
+import Header2 from "@/components/Header2.vue";
 import Footer from "@/components/Footer.vue";
 export default {
 	data() {
 		return {};
 	},
 	components: {
-		Header,
+		Header2,
 		Footer
 	}
 };
@@ -110,13 +125,12 @@ export default {
 <style scoped>
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
 .container-gallery {
-	padding-top: 9rem;
-	max-width: 50%;
+	padding: 9rem 1rem 1rem 1rem;
+	width: 50rem;
 	display: grid;
 	justify-content: center;
-
-	grid-template-columns: 8vw 8vw 8vw 8vw 8vw;
-	grid-template-rows: repeat(2, 8vw);
+	grid-template-columns: 8rem 8rem 8rem 8rem 8rem;
+	grid-template-rows: repeat(2, 8rem);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -136,7 +150,8 @@ export default {
 	padding-top: 5rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	max-width: 40%;
+	width: 50rem;
+	padding: 1rem;
 	margin-left: auto;
 	margin-right: auto;
 	grid-gap: 3rem;
@@ -181,23 +196,23 @@ export default {
 	font-size: 12px;
 }
 
-/* Vimeo embed settings */
-.embed-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	height: 0;
-	overflow: hidden;
-	max-width: 100%;
-	height: auto;
-	grid-column: auto / span 2;
+.signature {
+	padding-top: 5rem;
+	width: 30rem;
+	margin-left: auto;
+	margin-right: auto;
 }
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+.signature img {
 	height: 100%;
+	width: 100%;
+}
+.information-container {
+	font-family: "Raleway", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 5rem;
+	width: 40rem;
+	margin: auto;
+	text-align: center;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header />
+		<Header2 />
 		<div class="products animated fadeIn delay-0.2s">
 			<ul class="overview">
 				<li class="overview__item" v-for="product in stories" :key="product.full_slug">
@@ -23,14 +23,14 @@
 
 
 <script>
-import Header from "@/components/Header.vue";
+import Header2 from "@/components/Header2.vue";
 import Footer from "@/components/Footer.vue";
 export default {
 	data() {
 		return { stories: [] };
 	},
 	components: {
-		Header,
+		Header2,
 		Footer
 	},
 	asyncData(context) {

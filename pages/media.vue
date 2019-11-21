@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header />
+		<Header2 />
 		<div class="video-container animated fadeIn delay-0.5s">
 			<div class="video-title">concert i</div>
 			<iframe
@@ -15,10 +15,10 @@
 	</div>
 </template>
 <script>
-import Header from "@/components/Header.vue";
+import Header2 from "@/components/Header2.vue";
 export default {
 	components: {
-		Header
+		Header2
 	}
 };
 </script>
