@@ -72,7 +72,6 @@ export default {
 }
 .logo-container img {
 	width: auto;
-	height: 100%;
 }
 .logo-container img:hover {
 	opacity: 0.7;
