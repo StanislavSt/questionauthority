@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header2 />
+		<Header />
 		<div class="product animated slideInUp delay-0.1s" v-editable="blok">
 			<div class="left">
 				<div class="product__information">
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import Header2 from "@/components/Header2.vue";
+import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import ProductInfo from "@/components/ProductInfo.vue";
 export default {
@@ -80,7 +80,7 @@ export default {
 		};
 	},
 	components: {
-		Header2,
+		Header,
 		Footer,
 		ProductInfo
 	},

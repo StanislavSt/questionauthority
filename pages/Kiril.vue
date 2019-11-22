@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header2 />
+		<Header />
 		<div class="gallery animated fadeIn">
 			<img class="image" src="@/assets/Kiril1.jpg" alt />
 			<img class="image" src="@/assets/Kiril2.jpg" alt />
@@ -10,11 +10,11 @@
 	</div>
 </template>
 <script>
-import Header2 from "@/components/Header2.vue";
+import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 export default {
 	components: {
-		Header2,
+		Header,
 		Footer
 	}
 };

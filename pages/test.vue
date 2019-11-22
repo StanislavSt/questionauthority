@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header2 />
+		<Header />
 		<div class="content">
 			<div class="content-container">
 				<div style="cursor: pointer;" v-on:click="toggle('details')">+ Product details</div>
@@ -30,7 +30,7 @@
 
 
 <script>
-import Header2 from "@/components/Header2.vue";
+import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 export default {
 	data() {
@@ -41,7 +41,7 @@ export default {
 		};
 	},
 	components: {
-		Header2,
+		Header,
 		Footer
 	},
 	methods: {

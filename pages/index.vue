@@ -1,122 +1,115 @@
 <template>
 	<div>
-		<Header2 />
-		<div class="container animated fadeIn">
-			<!--<div class="embed-container">
-				<iframe
-					src="https://player.vimeo.com/video/367024729?color=ff9933&title=0&byline=0&portrait=0"
-					frameborder="0"
-					webkitAllowFullScreen
-					mozallowfullscreen
-					allowfullscreen
-				></iframe>
-			</div>-->
-			<div class="image-container">
-				<nuxt-link to="/absolute-comfort">
-					<img src="@/assets/QA_Comfort.png" alt />
-				</nuxt-link>
-				<div class="image-description">
-					<div class="item">Question Authority - Absolute Comfort</div>
+		<Header />
+		<div class="wrapper">
+			<div class="container animated fadeIn">
+				<div class="image-container">
+					<nuxt-link to="/absolute-comfort">
+						<img src="@/assets/QA_Comfort.png" alt />
+					</nuxt-link>
+					<div class="image-description">
+						<div class="item">Question Authority - Absolute Comfort</div>
+					</div>
 				</div>
-			</div>
-			<div class="image-container">
-				<nuxt-link to="/SavageRavage">
-					<img src="@/assets/SavageRavage.png" alt />
-				</nuxt-link>
-				<div class="image-description">
-					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
+				<div class="image-container">
+					<nuxt-link to="/SavageRavage">
+						<img src="@/assets/SavageRavage.png" alt />
+					</nuxt-link>
+					<div class="image-description">
+						<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
+					</div>
 				</div>
-			</div>
-			<div class="image-container">
-				<nuxt-link to="/SavageRavage">
-					<img src="@/assets/QA_WhiteTee.jpg" alt />
-				</nuxt-link>
-				<div class="image-description">
-					<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Kiril Kiryakov</div>
+				<div class="image-container">
+					<nuxt-link to="/SavageRavage">
+						<img src="@/assets/QA_WhiteTee.jpg" alt />
+					</nuxt-link>
+					<div class="image-description">
+						<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Kiril Kiryakov</div>
+					</div>
 				</div>
-			</div>
 
-			<div class="image-container">
-				<nuxt-link to="/SavageRavage">
-					<img src="@/assets/QAINSTA1.jpg" alt />
-				</nuxt-link>
-				<div class="image-description">
-					<div class="item">Question Authority - Concept I</div>
+				<div class="image-container">
+					<nuxt-link to="/SavageRavage">
+						<img src="@/assets/QAINSTA1.jpg" alt />
+					</nuxt-link>
+					<div class="image-description">
+						<div class="item">Question Authority - Concept I</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container-gallery">
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-			</a>
+			<div class="container-gallery">
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
+				</a>
 
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-			</a>
-			<a
-				href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-			>
-				<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-			</a>
-		</div>
-		<div
-			class="information-container"
-		>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-		<div class="signature">
-			<img src="@/assets/QA_Signature.png" alt />
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
+				</a>
+				<a
+					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
+				>
+					<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
+				</a>
+			</div>
+			<div
+				class="information-container"
+			>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+			<div class="signature">
+				<img src="@/assets/QA_Signature.png" alt />
+			</div>
 		</div>
 		<Footer />
 	</div>
 </template>
 
 <script>
-import Header2 from "@/components/Header2.vue";
+import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 export default {
 	data() {
 		return {};
 	},
 	components: {
-		Header2,
+		Header,
 		Footer
 	}
 };
@@ -146,30 +139,26 @@ export default {
 	filter: grayscale(0) saturate(150%);
 	transition: filter 0.5s;
 }
+.wrapper {
+	max-width: 100%;
+}
 .container {
-	padding-top: 5rem;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-gap: 3rem;
 	width: 50rem;
-	padding: 1rem;
+
 	margin-left: auto;
 	margin-right: auto;
-	grid-gap: 3rem;
+	padding: 1rem;
 }
 .image-container {
-	object-fit: cover;
-	grid-column: auto / span 2;
-	max-height: 100%;
-	padding: 4rem 0 3rem 0;
-	margin-left: auto;
-	margin-right: auto;
 	max-width: 100%;
-	min-width: 35rem;
+	padding-top: 4rem;
 	text-align: center;
 }
 .image-container img {
-	width: 100%;
-
+	max-width: 100%;
+	margin: auto;
 	transition: opacity 0.4s ease-out;
 	-moz-transition: opacity 0.4s ease-out;
 	-webkit-transition: opacity 0.4s ease-out;
