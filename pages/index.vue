@@ -37,59 +37,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container-gallery">
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-				</a>
-
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-				</a>
-				<a
-					href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-				>
-					<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-				</a>
-			</div>
+			<InstagramGallery />
 			<div
 				class="information-container"
 			>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
@@ -104,41 +52,22 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import InstagramGallery from "@/components/InstagramGallery.vue";
 export default {
 	data() {
 		return {};
 	},
 	components: {
 		Header,
-		Footer
+		Footer,
+		InstagramGallery
 	}
 };
 </script>
 
 <style scoped>
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
-.container-gallery {
-	padding: 9rem 1rem 1rem 1rem;
-	width: 50rem;
-	display: grid;
-	justify-content: center;
-	grid-template-columns: 8rem 8rem 8rem 8rem 8rem;
-	grid-template-rows: repeat(2, 8rem);
-	margin-left: auto;
-	margin-right: auto;
-}
-.container-gallery img {
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(100%);
-	width: 100%;
-	height: 100%;
-	transition: filter 0.5s;
-}
-.container-gallery img:hover {
-	-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
-	filter: grayscale(0) saturate(150%);
-	transition: filter 0.5s;
-}
+
 .wrapper {
 	max-width: 100%;
 }
@@ -146,7 +75,8 @@ export default {
 	display: grid;
 	grid-gap: 3rem;
 	width: 50rem;
-
+	max-width: 100%;
+	max-height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1rem;
@@ -188,6 +118,7 @@ export default {
 .signature {
 	padding-top: 5rem;
 	width: 30rem;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -201,6 +132,7 @@ export default {
 	font-weight: bold;
 	padding-top: 5rem;
 	width: 40rem;
+	max-width: 100%;
 	margin: auto;
 	text-align: center;
 }

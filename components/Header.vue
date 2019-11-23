@@ -49,18 +49,17 @@ export default {
 	color: white;
 }
 .sticky {
+	padding: 0 1rem 0 1rem;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	height: 2.3rem;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	z-index: 999;
 	background: black;
 }
-.sticky div {
-	margin: -0.1rem 2rem 0.1rem 2rem;
-}
+
 .date-container,
 .consume-container {
 	flex: 1;
