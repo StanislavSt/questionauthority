@@ -2,9 +2,7 @@
 	<div class="sticky">
 		<div class="date-container">{{timestamp}}</div>
 		<div class="logo-container">
-			<nuxt-link to="/">
-				<img src="@/assets/QA_Logo_White.png" alt />
-			</nuxt-link>
+			<nuxt-link tag="img" :src="require('@/assets/QA_Logo_White.png')" to="/"></nuxt-link>
 		</div>
 		<div class="consume-container">CONSUME</div>
 	</div>
@@ -49,19 +47,18 @@ export default {
 	color: white;
 }
 .sticky {
-	padding: 0 1rem 0 1rem;
+	position: fixed;
+	top: 0;
+	padding: 0 1rem;
 	display: flex;
-	justify-content: space-between;
 	width: 100%;
 	height: 2.3rem;
-	position: absolute;
-	top: 0;
 	z-index: 999;
 	background: black;
 }
-
 .date-container,
-.consume-container {
+.consume-container,
+.logo-container {
 	flex: 1;
 	display: flex;
 	align-items: center;
@@ -70,14 +67,28 @@ export default {
 	justify-content: flex-end;
 }
 .logo-container {
-	text-align: center;
+	justify-content: center;
 }
 .logo-container img {
 	height: 100%;
+	width: auto;
 	object-fit: contain;
+	cursor: pointer;
 }
 .logo-container img:hover {
 	opacity: 0.7;
 	filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+@media screen and (max-width: 600px) {
+	* {
+		font-size: 14px;
+	}
+	.date-container {
+		display: none;
+	}
+	.logo-container {
+		justify-content: flex-start;
+		max-width: 60px;
+	}
 }
 </style>

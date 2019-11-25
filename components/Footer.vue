@@ -34,14 +34,26 @@
 .nav {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	margin-top: 10rem;
 	background: black;
 }
 .nav .item {
-	margin: 0.2rem 0.7rem 0.2rem 0.7rem;
+	margin: 0.1rem 0.9rem;
 }
 a:hover {
 	opacity: 0.8;
 	filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+@media screen and (max-width: 480px) {
+	* {
+		font-size: 0.6rem;
+	}
+	.nav .item {
+		margin: 0 0.2rem;
+	}
+	.nav {
+		justify-content: space-between;
+	}
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<div class="product animated slideInUp delay-0.1s" v-editable="blok">
+		<div class="product" v-editable="blok">
 			<!--<div class="left">
 				<div class="product__information">
 					<div class="product__price">Description</div>
@@ -11,7 +11,7 @@
 					<div class="product__sizechart">End</div>
 				</div>
 			</div>-->
-			<div class="mid">
+			<div class="mid animated slideInUp delay-0.1s">
 				<div v-if="blok.images.length > 0" class="product__images">
 					<div v-for="image in blok.images" :key="image.filename">
 						<img :src="image.filename" :alt="image.name " />
@@ -125,10 +125,6 @@ export default {
 	width: 75%;
 	display: flex;
 }
-.product .left {
-	flex: 1;
-	justify-content: flex-start;
-}
 .product .mid {
 	flex: 4;
 }
@@ -136,10 +132,14 @@ export default {
 	display: block;
 	margin: auto;
 }
+.product .left {
+	flex: 1;
+	justify-content: flex-start;
+}
+
 .product .right {
 	flex: 1;
 }
-
 .product__information {
 	margin: 0 auto;
 	display: flex;

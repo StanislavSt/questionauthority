@@ -72,6 +72,7 @@ export default {
 	justify-content: center;
 	grid-template-columns: repeat(5, 9rem);
 	grid-template-rows: repeat(2, 9rem);
+	grid-gap: 0.1rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -108,8 +109,8 @@ export default {
 }
 @media screen and (max-width: 420px) {
 	.container-gallery {
-		grid-template-columns: repeat(5, 4rem);
-		grid-template-rows: repeat(2, 4rem);
+		grid-template-columns: repeat(5, 3.5rem);
+		grid-template-rows: repeat(2, 3.5rem);
 	}
 }
 </style>

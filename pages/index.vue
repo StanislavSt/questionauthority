@@ -2,41 +2,7 @@
 	<div>
 		<Header />
 		<div class="wrapper">
-			<div class="container animated fadeIn">
-				<div class="image-container">
-					<nuxt-link to="/absolute-comfort">
-						<img src="@/assets/QA_Comfort.png" alt />
-					</nuxt-link>
-					<div class="image-description">
-						<div class="item">Question Authority - Absolute Comfort</div>
-					</div>
-				</div>
-				<div class="image-container">
-					<nuxt-link to="/SavageRavage">
-						<img src="@/assets/SavageRavage.png" alt />
-					</nuxt-link>
-					<div class="image-description">
-						<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
-					</div>
-				</div>
-				<div class="image-container">
-					<nuxt-link to="/SavageRavage">
-						<img src="@/assets/QA_WhiteTee.jpg" alt />
-					</nuxt-link>
-					<div class="image-description">
-						<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Kiril Kiryakov</div>
-					</div>
-				</div>
-
-				<div class="image-container">
-					<nuxt-link to="/SavageRavage">
-						<img src="@/assets/QAINSTA1.jpg" alt />
-					</nuxt-link>
-					<div class="image-description">
-						<div class="item">Question Authority - Concept I</div>
-					</div>
-				</div>
-			</div>
+			<News />
 			<InstagramGallery />
 			<div
 				class="information-container"
@@ -53,6 +19,7 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import InstagramGallery from "@/components/InstagramGallery.vue";
+import News from "@/components/News.vue";
 export default {
 	data() {
 		return {};
@@ -60,61 +27,16 @@ export default {
 	components: {
 		Header,
 		Footer,
-		InstagramGallery
+		InstagramGallery,
+		News
 	}
 };
 </script>
 
 <style scoped>
-@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
-
 .wrapper {
 	max-width: 100%;
 }
-.container {
-	display: grid;
-	grid-gap: 3rem;
-	width: 50rem;
-	max-width: 100%;
-	max-height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 1rem;
-}
-.image-container {
-	max-width: 100%;
-	padding-top: 4rem;
-	text-align: center;
-}
-.image-container img {
-	max-width: 100%;
-	margin: auto;
-	transition: opacity 0.4s ease-out;
-	-moz-transition: opacity 0.4s ease-out;
-	-webkit-transition: opacity 0.4s ease-out;
-	-o-transition: opacity 0.4s ease-out;
-}
-.image-container img:hover {
-	opacity: 0.6;
-	transition: opacity 0.5s ease-out;
-	-moz-transition: opacity 0.5s ease-out;
-	-webkit-transition: opacity 0.5s ease-out;
-	-o-transition: opacity 0.5s ease-out;
-}
-.image-container .image-description {
-	display: flex;
-	justify-content: center;
-	width: auto;
-	padding-top: 0.5rem;
-}
-.image-container .image-description .item {
-	white-space: pre;
-	background: black;
-	color: white;
-	text-transform: uppercase;
-	font-size: 12px;
-}
-
 .signature {
 	padding-top: 5rem;
 	width: 30rem;
