@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<Header2 />
+		<Header />
 	</div>
 </template>
 <script>
-import Header2 from "@/components/Header2.vue";
+import Header from "@/components/Header.vue";
 export default {
 	components: {
-		Header2
+		Header
 	}
 };
 </script>

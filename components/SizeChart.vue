@@ -3,7 +3,7 @@
 		<div class="content">
 			<div class="content-container">
 				<div>
-					<span class="main" v-on:click="toggle('details')">Material</span>
+					<span class="main" v-on:click="toggle('details')">Size Chart</span>
 				</div>
 				<div class="myText" ref="myText" :style="[isActiveDetails ? { height : computedHeight } : {}]">
 					<ul>
