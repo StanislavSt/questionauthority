@@ -132,6 +132,7 @@ export default {
 	min-height: 100%;
 }
 .product-price {
+	display: none;
 	text-align: center;
 	font-size: 16px;
 }
