@@ -154,7 +154,8 @@ export default {
 	object-fit: contain;
 }
 .product-price {
-	display: flex;
+	display: none;
+	/*display: flex;*/
 	justify-content: center;
 	width: auto;
 	padding-top: 0.5rem;

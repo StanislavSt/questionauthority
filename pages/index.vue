@@ -35,7 +35,6 @@ export default {
 
 <style scoped>
 .wrapper {
-	max-width: 100%;
 }
 .signature {
 	padding-top: 5rem;

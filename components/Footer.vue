@@ -47,7 +47,7 @@ a:hover {
 }
 @media screen and (max-width: 480px) {
 	* {
-		font-size: 0.6rem;
+		font-size: 0.7rem;
 	}
 	.nav .item {
 		margin: 0 0.2rem;
