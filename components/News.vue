@@ -1,33 +1,47 @@
 <template>
 	<div class="news-container animated fadeIn">
-		<div class="image-container">
-			<nuxt-link tag="img" :src="require('@/assets/QA_Comfort.png')" to="/absolute-comfort"></nuxt-link>
+		<div v-for="item in this.story.stories.reverse()" :key="item.id" class="image-container">
+			<nuxt-link tag="img" :src="item.content.Thumbnail" :to="'/' + item.slug"></nuxt-link>
 			<div class="image-description">
-				<div class="item">Question Authority - Absolute Comfort</div>
-			</div>
-		</div>
-		<div class="image-container">
-			<nuxt-link tag="img" :src="require('@/assets/SavageRavage.png')" to="/SavageRavage"></nuxt-link>
-			<div class="image-description">
-				<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Savage Ravage</div>
-			</div>
-		</div>
-		<div class="image-container">
-			<nuxt-link tag="img" :src="require('@/assets/QA_WhiteTee.jpg')" to="/SavageRavage"></nuxt-link>
-			<div class="image-description">
-				<div class="item">Question Authority &nbsp; &nbsp;X &nbsp; &nbsp;Kiril Kiryakov</div>
-			</div>
-		</div>
-		<div class="image-container">
-			<nuxt-link tag="img" :src="require('@/assets/QAINSTA1.jpg')" to="/SavageRavage"></nuxt-link>
-			<div class="image-description">
-				<div class="item">Question Authority - Concept I</div>
+				<div class="item">{{item.content.title}}</div>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
-export default {};
+import StoryblokClient from "storyblok-js-client";
+
+let storyapi = new StoryblokClient({
+	accessToken: "GaHO0tre64SXQQg7uSv7GQtt"
+});
+
+export default {
+	data() {
+		return {
+			story: {
+				stories: []
+			}
+		};
+	},
+	methods: {
+		getStory(version) {
+			storyapi
+				.get("cdn/stories/", {
+					starts_with: "collections/",
+					version: version
+				})
+				.then(response => {
+					this.story = response.data;
+				})
+				.catch(error => {
+					console.log(error);
+				});
+		}
+	},
+	created() {
+		this.getStory("Published");
+	}
+};
 </script>
 <style scoped>
 * {
