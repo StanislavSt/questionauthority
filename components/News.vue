@@ -83,5 +83,6 @@ export default {
 }
 .image-container .image-description .item {
 	background: black;
+	font-size: 15px;
 }
 </style>
