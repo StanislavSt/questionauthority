@@ -1,7 +1,7 @@
 <template>
 	<div class="news-container animated fadeIn">
 		<div v-for="item in this.story.stories.reverse()" :key="item.id" class="image-container">
-			<nuxt-link tag="img" :src="item.content.Thumbnail" :to="'/' + item.slug"></nuxt-link>
+			<nuxt-link tag="img" :src="item.content.thumbnail" :to="'/' + item.full_slug"></nuxt-link>
 			<div class="image-description">
 				<div class="item">{{item.content.title}}</div>
 			</div>
