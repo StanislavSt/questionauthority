@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<Header />
 		<div class="products animated fadeIn delay-0.2s">
 			<ul class="overview">
 				<li class="overview__item" v-for="product in stories" :key="product.full_slug">
@@ -15,23 +14,13 @@
 				</li>
 			</ul>
 		</div>
-		<Footer />
 	</div>
 </template>
 
-
-
-
 <script>
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
 export default {
 	data() {
 		return { stories: [] };
-	},
-	components: {
-		Header,
-		Footer
 	},
 	asyncData(context) {
 		// Check if we are in the editing mode

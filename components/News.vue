@@ -1,6 +1,6 @@
 <template>
 	<div class="news-container animated fadeIn">
-		<div v-for="item in this.story.stories.reverse()" :key="item.id" class="image-container">
+		<div v-for="item in this.blok.stories" :key="item.id" class="image-container">
 			<nuxt-link tag="img" :src="item.content.thumbnail" :to="'/' + item.full_slug"></nuxt-link>
 			<div class="image-description">
 				<div class="item">{{item.content.title}}</div>
@@ -9,37 +9,10 @@
 	</div>
 </template>
 <script>
-import StoryblokClient from "storyblok-js-client";
-
-let storyapi = new StoryblokClient({
-	accessToken: "GaHO0tre64SXQQg7uSv7GQtt"
-});
-
 export default {
+	props: ["blok"],
 	data() {
-		return {
-			story: {
-				stories: []
-			}
-		};
-	},
-	methods: {
-		getStory(version) {
-			storyapi
-				.get("cdn/stories/", {
-					starts_with: "collections/",
-					version: version
-				})
-				.then(response => {
-					this.story = response.data;
-				})
-				.catch(error => {
-					console.log(error);
-				});
-		}
-	},
-	created() {
-		this.getStory("Published");
+		return {};
 	}
 };
 </script>

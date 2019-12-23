@@ -47,8 +47,8 @@ export default {
 	color: white;
 }
 .sticky {
-	position: fixed;
-	top: 0;
+	/*position: absolute;
+	top: 0;*/
 	padding: 0 1rem;
 	display: flex;
 	width: 100%;

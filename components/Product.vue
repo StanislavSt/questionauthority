@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<Header />
 		<div class="product" v-editable="blok">
 			<!--<div class="left">
 				<div class="product__information">
@@ -56,13 +55,10 @@
 				</div>-->
 			</div>
 		</div>
-		<Footer />
 	</div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
 import ProductInfo from "@/components/ProductInfo.vue";
 export default {
 	props: ["blok"],
@@ -92,8 +88,6 @@ export default {
 		};
 	},
 	components: {
-		Header,
-		Footer,
 		ProductInfo
 	},
 	computed: {
