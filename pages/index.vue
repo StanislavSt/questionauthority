@@ -16,43 +16,15 @@
 <script>
 import InstagramGallery from "@/components/InstagramGallery.vue";
 import News from "@/components/News.vue";
+import { getPosts } from "@/api";
 export default {
-	data() {
-		return {};
-	},
 	components: {
 		InstagramGallery,
 		News
 	},
-
-	asyncData(context) {
-		return context.app.$storyapi
-			.get(`cdn/stories`, {
-				filter_query: {
-					component: {
-						in: "collection"
-					}
-				},
-				cv: context.store.state.cacheVersio
-			})
-			.then(res => {
-				return { collections: res.data };
-			})
-			.catch(res => {
-				if (!res.response) {
-					console.error(res);
-					errorCallback({
-						statusCode: 404,
-						message: "Failed to receive content from the api."
-					});
-				} else {
-					console.error(res.response.data);
-					errorCallback({
-						statusCode: res.response.status,
-						message: res.response.data
-					});
-				}
-			});
+	async asyncData(context) {
+		const posts = await getPosts(context);
+		return { collections: posts };
 	}
 };
 </script>
