@@ -84,8 +84,7 @@ export default {
 			return arr;
 		},
 		currentSizeOptions() {
-			if (this.current != "") return this.sizeInStock.join("|");
-			else return this.sizeInStock.join("|");
+			return this.sizeInStock.join("|");
 		}
 	}
 };
