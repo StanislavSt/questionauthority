@@ -18,11 +18,13 @@
 					<div class="product__size">
 						<ul>
 							<li
-								v-for="(name,i) in sizes"
-								v-bind:key="name.id"
-								@click="current = i"
-								:class="{current:i == current}"
-							>{{name}}</li>
+								v-for="(stock,size) in allSizes"
+								v-bind:key="size.id"
+								@click="stock > 0 ? current = size : current "
+								v-bind:class="{'no-stock' : stock < 1, 'current':size == current && stock > 0, 'size_hover':hover && stock > 0}"
+								@mouseover="hover = true"
+								@mouseleave="hover = false"
+							>{{size}}</li>
 						</ul>
 					</div>
 					<button
@@ -33,7 +35,8 @@
 						:data-item-url="$nuxt.$route.path"
 						:data-item-image="allImages[0].url"
 						data-item-custom1-name="SIZE"
-						data-item-custom1-options="S|M|L"
+						:data-item-custom1-options="currentSizeOptions"
+						:data-item-custom1-value="current"
 					>Consume</button>
 
 					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
@@ -49,27 +52,8 @@ export default {
 	props: ["blok"],
 	data() {
 		return {
-			zoomerOptions: {
-				zoomFactor: 3,
-				pane: "pane",
-				hoverDelay: 300,
-				namespace: "zoomer-top",
-				move_by_click: false,
-				scroll_items: 7,
-				choosed_thumb_border_color: "#dd2c00",
-				scroller_position: "top",
-				zoomer_pane_position: "left"
-			},
-			images: {
-				normal_size: [
-					this.blok.images.map(a => ({
-						id: a.name,
-						url: a.filename
-					}))
-				]
-			},
-			sizes: ["S", "M", "L", "XL"],
-			current: 1
+			current: "",
+			hover: false
 		};
 	},
 	components: {
@@ -83,6 +67,25 @@ export default {
 					url: a.filename
 				}));
 			}
+		},
+		allSizes() {
+			return {
+				S: this.blok.SQuantity,
+				M: this.blok.MQuantity,
+				L: this.blok.LQuantity,
+				XL: this.blok.XLQuantity
+			};
+		},
+		sizeInStock() {
+			const arr = [];
+			for (const [k, v] of Object.entries(this.allSizes)) {
+				if (v > 0) arr.push(k);
+			}
+			return arr;
+		},
+		currentSizeOptions() {
+			if (this.current != "") return this.sizeInStock.join("|");
+			else return this.sizeInStock.join("|");
 		}
 	}
 };
@@ -158,12 +161,17 @@ export default {
 	width: 3.5rem;
 	text-align: center;
 	padding: 1rem;
-	cursor: pointer;
+
 	font-size: 0.8rem;
 }
-.product__size ul li:hover {
+.no-stock {
+	text-decoration: line-through;
+	cursor: default;
+}
+.size_hover:hover {
 	background: #222;
 	color: white;
+	cursor: pointer;
 }
 .active {
 	background: black;
