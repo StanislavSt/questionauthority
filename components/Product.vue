@@ -1,15 +1,6 @@
 <template>
 	<div>
 		<div class="product" v-editable="blok">
-			<!--<div class="left">
-				<div class="product__information">
-					<div class="product__price">Description</div>
-					<div
-						class="product__shipping"
-					>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</div>
-					<div class="product__sizechart">End</div>
-				</div>
-			</div>-->
 			<div class="mid animated slideInUp delay-0.1s">
 				<div v-if="blok.images.length > 0" class="product__images">
 					<div v-for="image in blok.images" :key="image.filename">
@@ -40,6 +31,9 @@
 						:data-item-name="blok.name"
 						:data-item-price="blok.price"
 						:data-item-url="$nuxt.$route.path"
+						:data-item-image="allImages[0].url"
+						data-item-custom1-name="SIZE"
+						data-item-custom1-options="S|M|L"
 					>Consume</button>
 
 					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
