@@ -31,20 +31,9 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css' }
+
+      { rel: 'stylesheet', href: 'https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css' }
     ],
-    script: [
-      {
-        src: "https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"
-      },
-      {
-        src: "https://cdn.snipcart.com/scripts/2.0/snipcart.js",
-        id: "snipcart",
-        "data-autopop": "false",
-        "data-api-key":
-          "NmM4YjBiYzAtMzhiMy00Y2MzLWFkMTktMzhkOWNhOTI1N2VmNjM3MTI4OTIzOTAwMTE2MDM4"
-      }
-    ]
   },
   /*
    ** Customize the progress bar color

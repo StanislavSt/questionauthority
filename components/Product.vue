@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div class="product" v-editable="blok">
-			<div class="mid animated slideInUp delay-0.1s">
-				<div v-if="blok.images.length > 0" class="product__images">
+			<div class="mid">
+				<div v-if="blok.images.length > 0" class="product__images animated slideInUp delay-0.1s">
 					<div v-for="image in blok.images" :key="image.filename">
 						<img :src="image.filename" :alt="image.name " />
 					</div>
@@ -10,7 +10,6 @@
 			</div>
 			<div class="right">
 				<div class="product__information">
-					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
 					<div class="product__price">{{ blok.price }} EURO</div>
 					<div class="product__shipping">Shipping is at the customer's expense</div>
 					<ProductInfo />
@@ -38,8 +37,6 @@
 						:data-item-custom1-options="currentSizeOptions"
 						:data-item-custom1-value="current"
 					>Consume</button>
-
-					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
 				</div>
 			</div>
 		</div>

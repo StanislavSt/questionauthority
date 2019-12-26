@@ -3,6 +3,12 @@
 		<Header />
 		<nuxt />
 		<Footer />
+		<div
+			hidden
+			id="snipcart"
+			data-api-key="NmM4YjBiYzAtMzhiMy00Y2MzLWFkMTktMzhkOWNhOTI1N2VmNjM3MTI4OTIzOTAwMTE2MDM4"
+		></div>
+		<script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
 	</div>
 </template>
 <script>
