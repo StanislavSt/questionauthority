@@ -23,7 +23,7 @@
 export default {
 	data() {
 		return {
-			isActiveDetails: false,
+			isActiveDetails: true,
 			isActiveShipping: false,
 			computedHeight: 0
 		};

@@ -30,11 +30,8 @@ module.exports = {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href: "https://app.snipcart.com/themes/base/snipcart.css"
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css' }
     ],
     script: [
       {
@@ -45,7 +42,7 @@ module.exports = {
         id: "snipcart",
         "data-autopop": "false",
         "data-api-key":
-          "NTUwM2YyNDgtZTFhOC00OTRmLWEwZjctOTBlMDc0MWI4YjBlNjM3MDQ3NzY4MzQxMDc0MTUy"
+          "NmM4YjBiYzAtMzhiMy00Y2MzLWFkMTktMzhkOWNhOTI1N2VmNjM3MTI4OTIzOTAwMTE2MDM4"
       }
     ]
   },
@@ -55,7 +52,7 @@ module.exports = {
   loading: { color: "#3B8070" },
 
   generate: {
-    routes: function(callback) {
+    routes: function (callback) {
       const token = `GaHO0tre64SXQQg7uSv7GQtt`; // replace with your key
       const per_page = 100;
       const version = "draft";

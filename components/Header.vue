@@ -4,7 +4,13 @@
 		<div class="logo-container">
 			<nuxt-link tag="img" :src="require('@/assets/QA_Logo_White.png')" to="/"></nuxt-link>
 		</div>
-		<div class="consume-container">CONSUME</div>
+		<div class="consume-container">
+			<a class="snipcart-checkout">CONSUME</a>
+			<div class="snipcart-summary">
+				(
+				<a class="snipcart-total-items" />)
+			</div>
+		</div>
 	</div>
 </template>
 <script>
@@ -65,6 +71,15 @@ export default {
 }
 .consume-container {
 	justify-content: flex-end;
+}
+.snipcart-checkout:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.snipcart-total-items {
+	height: 50px;
+	width: 50px;
+	color: white;
 }
 .logo-container {
 	justify-content: center;

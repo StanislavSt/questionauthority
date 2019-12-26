@@ -2,6 +2,7 @@
 	<div>
 		<div class="wrapper">
 			<News :blok="collections" />
+
 			<InstagramGallery />
 			<div
 				class="information-container"

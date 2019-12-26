@@ -39,20 +39,11 @@
 						:data-item-id="blok._uid"
 						:data-item-name="blok.name"
 						:data-item-price="blok.price"
+						:data-item-url="$nuxt.$route.path"
 					>Consume</button>
 
 					<!--<h1 class="product__headline">{{ blok.name }}</h1>-->
 				</div>
-
-				<!--
-				<a href="#" class="snipcart-checkout">Click here to checkout</a>
-				<div>Lots of content</div>
-				<div class="snipcart-summary">
-					Number of items:
-					<span class="snipcart-total-items"></span>
-					Total price:
-					<span class="snipcart-total-price"></span>
-				</div>-->
 			</div>
 		</div>
 	</div>
