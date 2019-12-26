@@ -8,7 +8,7 @@
 			<a class="snipcart-checkout">CONSUME</a>
 			<div class="snipcart-summary">
 				(
-				<a class="snipcart-total-items" />)
+				<a class="snipcart-items-count" />)
 			</div>
 		</div>
 	</div>

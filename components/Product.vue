@@ -28,6 +28,7 @@
 					</div>
 					<button
 						class="snipcart-add-item"
+						data-item-stackable="true"
 						:data-item-id="blok._uid"
 						:data-item-name="blok.name"
 						:data-item-price="blok.price"
@@ -36,6 +37,7 @@
 						data-item-custom1-name="SIZE"
 						:data-item-custom1-options="currentSizeOptions"
 						:data-item-custom1-value="current"
+						:data-item-max-quantity="allSizes[current]"
 					>Consume</button>
 				</div>
 			</div>
