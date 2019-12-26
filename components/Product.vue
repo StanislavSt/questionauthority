@@ -12,7 +12,7 @@
 				<div class="product__information">
 					<div class="product__price">{{ blok.price }} EURO</div>
 					<div class="product__shipping">Shipping is at the customer's expense</div>
-					<ProductInfo />
+					<ProductInfo :blok="productInfo" />
 					<div class="product__sizechart">View Size Chart</div>
 					<div class="product__size">
 						<ul>
@@ -38,6 +38,7 @@
 						:data-item-custom1-options="currentSizeOptions"
 						:data-item-custom1-value="current"
 						:data-item-max-quantity="allSizes[current]"
+						data-item-autopop="false"
 					>Consume</button>
 				</div>
 			</div>
@@ -84,6 +85,14 @@ export default {
 		},
 		currentSizeOptions() {
 			return this.sizeInStock.join("|");
+		},
+		productInfo() {
+			return {
+				dimensions: this.blok.dimensions,
+				material: this.blok.material,
+				product_care: this.blok.product_care,
+				weight: this.blok.weight
+			};
 		}
 	}
 };

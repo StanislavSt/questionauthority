@@ -32,6 +32,8 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
+	background-color: #0b1015;
+	color: white;
 }
 
 *,

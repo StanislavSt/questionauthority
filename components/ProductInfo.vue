@@ -7,10 +7,10 @@
 				</div>
 				<div class="myText" ref="myText" :style="[isActiveDetails ? { height : computedHeight } : {}]">
 					<ul>
-						<li>Dimensions: 1620 x 2030mm</li>
-						<li>Weight: 2043g</li>
-						<li>Material: 82% Pure Virgin Wool 18% Cotton. Unnapped, with Ultrasuede® trim</li>
-						<li>Product Care: Dry clean</li>
+						<li v-if="blok.dimensions !='' && blok.dimensions">Dimensions: {{blok.dimensions}}</li>
+						<li v-if="blok.weight !=''  && blok.weight">Weight: {{blok.weight}}</li>
+						<li v-if="blok.material !='' && blok.material">Material: {{blok.material}}</li>
+						<li v-if="blok.product_care !='' && blok.product_care">Product Care: {{blok.product_care}}</li>
 					</ul>
 				</div>
 			</div>
@@ -21,6 +21,7 @@
 
 <script>
 export default {
+	props: ["blok"],
 	data() {
 		return {
 			isActiveDetails: true,
@@ -39,11 +40,8 @@ export default {
 			this.$refs["myText"].style.position = "absolute";
 			this.$refs["myText"].style.visibility = "hidden";
 			this.$refs["myText"].style.display = "block";
-
 			const height = this.$refs["myText"].clientHeight + 15 + "px";
-
 			this.computedHeight = height;
-
 			this.$refs["myText"].style.height = 0;
 			this.$refs["myText"].style.position = null;
 			this.$refs["myText"].style.visibility = null;
