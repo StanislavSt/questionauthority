@@ -7,7 +7,9 @@
 			hidden
 			id="snipcart"
 			data-api-key="NmM4YjBiYzAtMzhiMy00Y2MzLWFkMTktMzhkOWNhOTI1N2VmNjM3MTI4OTIzOTAwMTE2MDM4"
-		></div>
+		>
+			<div class="root"></div>
+		</div>
 		<script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
 	</div>
 </template>
@@ -32,8 +34,8 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
-	background-color: #0b1015;
-	color: white;
+	/*background-color: #0b1015;
+	color: white;*/
 }
 
 *,
@@ -59,6 +61,22 @@ html {
 
 .column {
 	flex: 1;
+}
+.snipcart-item-line {
+	background-color: white;
+	border-bottom: 1px solid #ccc;
+}
+.snipcart-layout__header {
+	background-color: black;
+}
+.snipcart-cart-header {
+	background-color: saddlebrown;
+}
+.snipcart-cart__content {
+	background-color: darkblue;
+}
+.snipcart-modal__container {
+	background-color: gainsboro;
 }
 </style>
 
