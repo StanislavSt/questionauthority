@@ -91,6 +91,7 @@ export default {
 
 @media screen and (max-width: 700px) {
 	.container-gallery {
+		padding: 4rem 1rem 1rem 1rem;
 		grid-template-columns: repeat(5, 7rem);
 		grid-template-rows: repeat(2, 7rem);
 	}

@@ -30,13 +30,13 @@
 }
 .footer {
 	width: 100%;
+	background: black;
 }
 .nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 10rem;
-	background: black;
+	margin: 5rem 1rem 0 1rem;
 }
 .nav .item {
 	margin: 0.1rem 0.9rem;

@@ -58,4 +58,9 @@ export default {
 	background: black;
 	font-size: 15px;
 }
+@media screen and (max-width: 720px) {
+	.image-container {
+		padding-top: 0;
+	}
+}
 </style>
