@@ -62,7 +62,7 @@ html {
 .column {
 	flex: 1;
 }
-.snipcart-item-line {
+/*.snipcart-item-line {
 	background-color: white;
 	border-bottom: 1px solid #ccc;
 }
@@ -77,6 +77,6 @@ html {
 }
 .snipcart-modal__container {
 	background-color: gainsboro;
-}
+}*/
 </style>
 
