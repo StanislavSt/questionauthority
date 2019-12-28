@@ -20,14 +20,14 @@
 								v-for="(stock,size) in allSizes"
 								v-bind:key="size.id"
 								@click="stock > 0 ? current = size : current "
-								v-bind:class="{'no-stock' : stock < 1, 'current':size == current && stock > 0, 'size_hover':hover && stock > 0}"
+								v-bind:class="getInStockClass(size,stock,current)"
 								@mouseover="hover = true"
 								@mouseleave="hover = false"
 							>{{size}}</li>
 						</ul>
 					</div>
 					<button
-						class="snipcart-add-item"
+						v-bind:class="getSoldOutClass()"
 						data-item-stackable="true"
 						:data-item-id="blok._uid"
 						:data-item-name="blok.name"
@@ -39,7 +39,7 @@
 						:data-item-custom1-value="current"
 						:data-item-max-quantity="allSizes[current]"
 						data-item-autopop="false"
-					>Consume</button>
+					>{{consumeBtnText}}</button>
 				</div>
 			</div>
 		</div>
@@ -58,6 +58,19 @@ export default {
 	},
 	components: {
 		ProductInfo
+	},
+	methods: {
+		getInStockClass(size, stock, current) {
+			return {
+				"no-stock": stock < 1,
+				current: size == current && stock > 0,
+				size_hover: this.hover && stock > 0
+			};
+		},
+		getSoldOutClass() {
+			if (this.sizeInStock.length == 0) return "sold-out";
+			else return "snipcart-add-item";
+		}
 	},
 	computed: {
 		allImages() {
@@ -93,6 +106,10 @@ export default {
 				product_care: this.blok.product_care,
 				weight: this.blok.weight
 			};
+		},
+		consumeBtnText() {
+			if (this.sizeInStock.length == 0) return "sold out";
+			else return "consume";
 		}
 	}
 };
@@ -200,6 +217,7 @@ export default {
 	width: 45rem;
 	max-width: 100%;
 }
+.sold-out,
 .snipcart-add-item {
 	text-transform: uppercase;
 	text-align: center;
@@ -215,6 +233,10 @@ export default {
 	max-width: 100%;
 	padding: 0;
 }
+.sold-out {
+	background: rgb(54, 52, 52);
+	pointer-events: none;
+}
 .snipcart-add-item:hover {
 	opacity: 0.7;
 }
@@ -224,6 +246,13 @@ export default {
 @media screen and (max-width: 1000px) {
 	.product {
 		flex-direction: column;
+	}
+	.product__information {
+		max-width: 450px;
+	}
+	.product .right {
+		display: flex;
+		justify-content: center;
 	}
 }
 </style>
