@@ -32,25 +32,18 @@
 </template>
 <script>
 export default {
-	props: ["products"],
-	data() {
-		return {};
-	}
+	props: ["products"]
 };
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
-.video-container {
-	padding-top: 10rem;
-	text-align: center;
-}
 .products {
 	display: flex;
 	padding-top: 5rem;
 	margin-left: auto;
 	margin-right: auto;
-	width: 53rem;
+	max-width: 53rem;
 	justify-content: center;
 }
 .products .overview__item {
@@ -76,7 +69,7 @@ export default {
 	display: grid;
 	grid-row-gap: 2rem;
 	justify-content: center;
-	width: 50rem;
+	max-width: 50rem;
 	margin-left: auto;
 	margin-right: auto;
 	grid-template-columns: 16rem 16rem 16rem;
@@ -98,30 +91,5 @@ export default {
 .product-price .item {
 	color: white;
 	background-color: black;
-}
-.information-container {
-	font-family: "Raleway", sans-serif;
-	font-size: 16px;
-	font-weight: bold;
-	padding-top: 5rem;
-	width: 40rem;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-.video-container .video-title {
-	font-size: 2rem;
-	text-transform: uppercase;
-	padding-bottom: 3rem;
-}
-.signature {
-	padding-top: 5rem;
-	width: 30rem;
-	margin-left: auto;
-	margin-right: auto;
-}
-.signature img {
-	height: 100%;
-	width: 100%;
 }
 </style>
