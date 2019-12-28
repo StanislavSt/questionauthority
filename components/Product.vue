@@ -114,6 +114,9 @@ export default {
 	width: 75%;
 	display: flex;
 }
+.product > div {
+	margin: 10px;
+}
 .product .mid {
 	flex: 4;
 }
@@ -121,11 +124,6 @@ export default {
 	display: block;
 	margin: auto;
 }
-.product .left {
-	flex: 1;
-	justify-content: flex-start;
-}
-
 .product .right {
 	flex: 1;
 }
@@ -222,5 +220,10 @@ export default {
 }
 .snipcart-summary {
 	display: block;
+}
+@media screen and (max-width: 1000px) {
+	.product {
+		flex-direction: column;
+	}
 }
 </style>

@@ -69,7 +69,24 @@ export default {
 }
 @media screen and (max-width: 860px) {
 	.iframe-container {
-		margin: 0 3rem;
+		margin: 0 1rem;
+		min-height: 56vw;
+	}
+	.video-container {
+		padding-top: 4rem;
+	}
+	.video-container .video-title {
+		font-size: 22px;
+	}
+}
+@media screen and (max-width: 670px) {
+	.video-container .video-title {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.video-container .video-title {
+		font-size: 14px;
 	}
 }
 </style>

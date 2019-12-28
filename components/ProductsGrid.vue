@@ -43,15 +43,16 @@ export default {
 	padding-top: 5rem;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 53rem;
+	width: 53rem;
+	max-width: 100%;
 	justify-content: center;
 }
 .products .overview__item {
 	flex: 1;
-	height: 30rem;
+	max-height: 30rem;
 }
 .products .overview__item img {
-	width: 100%; /* image box size as % of container, see step 1 */
+	width: 100%;
 	height: 100%;
 	object-fit: contain;
 }
@@ -69,14 +70,15 @@ export default {
 	display: grid;
 	grid-row-gap: 2rem;
 	justify-content: center;
-	max-width: 50rem;
+	width: 50rem;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	grid-template-columns: 16rem 16rem 16rem;
-	grid-template-rows: 19rem 19rem;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto;
 }
 .small-products img {
-	width: 100%; /* image box size as % of container, see step 1 */
+	width: 100%;
 	height: 100%;
 	object-fit: contain;
 }
