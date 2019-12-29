@@ -5,20 +5,15 @@
 				<img :src="currentImg" />
 			</div>
 		</transition-group>
-		<a class="prev" @click="prev" href="#">&#10094; Previous</a>
-		<a class="next" @click="next" href="#">&#10095; Next</a>
+		<a class="prev" @click="prev" href="#"></a>
+		<a class="next" @click="next" href="#"></a>
 	</div>
 </template>
 <script>
 export default {
+	props: ["blok"],
 	data() {
 		return {
-			images: [
-				"https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-				"https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-				"https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-				"https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
-			],
 			timer: null,
 			currentIndex: 0
 		};
@@ -33,9 +28,8 @@ export default {
 	},
 	computed: {
 		currentImg() {
-			return this.images[
-				Math.abs(this.currentIndex) % this.images.length
-			];
+			return this.blok[Math.abs(this.currentIndex) % this.blok.length]
+				.filename;
 		}
 	}
 };
@@ -55,7 +49,7 @@ export default {
 .img-slider {
 	overflow: hidden;
 	position: relative;
-	height: 400px;
+	height: 900px;
 	width: 800px;
 }
 .img-slider img {
@@ -64,34 +58,32 @@ export default {
 	left: 0;
 	bottom: 0;
 	right: 0;
+	height: 200px;
+	width: 200px;
 }
 .container {
 	position: relative;
 	display: inline-block;
+	padding: 0 2rem;
 }
 .prev,
 .next {
-	cursor: pointer;
 	position: absolute;
-	width: auto;
-	color: white;
-	font-weight: bold;
-	font-size: 10px;
+	top: 50%;
+	width: 30px;
+	height: 40px;
 	transition: 0.7s ease;
-	border-radius: 0 4px 4px 0;
-	text-decoration: none;
-	user-select: none;
+	cursor: pointer;
+	background-repeat: no-repeat;
 }
 .next {
-	top: 50%;
 	right: 0;
+	background-image: url("../assets/icons/next.png");
+	background-position: right;
 }
 .prev {
 	left: 0;
-	top: 50%;
-}
-.prev:hover,
-.next:hover {
-	background-color: rgba(0, 0, 0, 0.9);
+	background-image: url("../assets/icons/prev.png");
+	background-position: left;
 }
 </style>
