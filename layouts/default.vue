@@ -37,14 +37,12 @@ html {
 	/*background-color: #0b1015;
 	color: white;*/
 }
-
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
 	margin: 0;
 }
-
 .teaser,
 .column {
 	font-size: 2rem;
@@ -54,7 +52,6 @@ html {
 	border-radius: 10px;
 	margin: 10px 5px;
 }
-
 .grid {
 	display: flex;
 }

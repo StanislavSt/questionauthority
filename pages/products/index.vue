@@ -25,7 +25,6 @@ export default {
 	asyncData(context) {
 		// Check if we are in the editing mode
 		let editMode = false;
-
 		if (
 			context.query._storyblok ||
 			context.isDev ||
