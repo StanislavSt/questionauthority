@@ -1,8 +1,8 @@
 <template>
-	<div>
+	<div class="body_wrapper">
 		<Header />
 		<nuxt />
-		<Footer />
+		<!--<Footer />-->
 		<div
 			hidden
 			id="snipcart"

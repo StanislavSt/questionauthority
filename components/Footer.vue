@@ -28,13 +28,15 @@
 .footer {
 	width: 100%;
 	background: black;
+	clear: both;
+	position: relative;
+	height: 20px;
 }
 .nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 5rem 1rem 0 1rem;
-	padding: 0.2rem 0;
 }
 .nav .item {
 	margin: 0.1rem 2rem;
