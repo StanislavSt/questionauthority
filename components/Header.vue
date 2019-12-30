@@ -67,6 +67,7 @@ export default {
 	width: auto;
 	cursor: pointer;
 	margin-left: 1rem;
+	object-fit: contain;
 }
 .logo-container img:hover {
 	opacity: 0.7;
