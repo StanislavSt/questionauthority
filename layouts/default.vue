@@ -37,9 +37,6 @@ html {
 	/*background-color: #0b1015;
 	color: white;*/
 }
-body {
-	background-color: rgb(31, 30, 30);
-}
 *,
 *:before,
 *:after {

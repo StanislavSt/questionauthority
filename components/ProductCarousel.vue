@@ -2,7 +2,9 @@
 	<div class="container">
 		<transition-group tag="div" class="img-slider" name="slide">
 			<div v-for="i in [currentIndex]" :key="i">
-				<img :src="currentImg" />
+				<div class="ratio">
+					<img :src="currentImg" />
+				</div>
 			</div>
 		</transition-group>
 		<a class="prev" @click="prev" href="#"></a>
@@ -39,6 +41,10 @@ export default {
 .slide-leave-active,
 .slide-enter-active {
 	transition: 1s;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 .slide-enter {
 	transform: translate(100%, 0);
@@ -49,30 +55,26 @@ export default {
 .img-slider {
 	overflow: hidden;
 	position: relative;
-	height: 900px;
-	width: 800px;
+	height: 75vw;
+	width: 100%;
 }
 .img-slider img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	height: 200px;
-	width: 200px;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 .container {
+	width: 100%;
 	position: relative;
-	display: inline-block;
-	padding: 0 2rem;
+	padding: 0 1.2rem;
 }
 .prev,
 .next {
 	position: absolute;
 	top: 50%;
-	width: 30px;
-	height: 40px;
-	transition: 0.7s ease;
+	width: 15px;
+	height: 25px;
 	cursor: pointer;
 	background-repeat: no-repeat;
 }

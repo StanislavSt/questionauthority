@@ -13,6 +13,11 @@ export default {
 				{
 					name: "",
 					filename:
+						"//a.storyblok.com/f/66978/740x1230/f2462161bc/legs.png"
+				},
+				{
+					name: "",
+					filename:
 						"//a.storyblok.com/f/66978/1000x1500/4922597247/1.png"
 				},
 				{

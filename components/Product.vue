@@ -7,6 +7,7 @@
 						<img :src="image.filename" :alt="image.name " />
 					</div>
 				</div>
+				<ProductCarousel class="hide_carousel" :blok="blok.images" />
 			</div>
 			<div class="right">
 				<div class="product__information">
@@ -48,6 +49,7 @@
 
 <script>
 import ProductInfo from "@/components/ProductInfo.vue";
+import ProductCarousel from "@/components/ProductCarousel.vue";
 export default {
 	props: ["blok"],
 	data() {
@@ -57,7 +59,8 @@ export default {
 		};
 	},
 	components: {
-		ProductInfo
+		ProductInfo,
+		ProductCarousel
 	},
 	methods: {
 		getInStockClass(size, stock, current) {
@@ -243,16 +246,28 @@ export default {
 .snipcart-summary {
 	display: block;
 }
+.hide_carousel {
+	display: none;
+}
 @media screen and (max-width: 1000px) {
 	.product {
 		flex-direction: column;
+		width: 90%;
+		padding-top: 2rem;
 	}
 	.product__information {
 		max-width: 450px;
+		padding-top: 0;
 	}
 	.product .right {
 		display: flex;
 		justify-content: center;
+	}
+	.hide_carousel {
+		display: block;
+	}
+	.product__images {
+		display: none;
 	}
 }
 </style>
