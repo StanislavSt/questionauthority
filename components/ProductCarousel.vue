@@ -2,9 +2,7 @@
 	<div class="container">
 		<transition-group tag="div" class="img-slider" name="slide">
 			<div v-for="i in [currentIndex]" :key="i">
-				<div class="ratio">
-					<img :src="currentImg" />
-				</div>
+				<img :src="currentImg" />
 			</div>
 		</transition-group>
 		<a class="prev" @click="prev" href="#"></a>
@@ -40,7 +38,7 @@ export default {
 <style scoped>
 .slide-leave-active,
 .slide-enter-active {
-	transition: 1s;
+	transition: 0.7s;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -65,6 +63,7 @@ export default {
 	object-fit: contain;
 }
 .container {
+	display: none;
 	width: 100%;
 	position: relative;
 	padding: 0 1.2rem;
@@ -87,5 +86,10 @@ export default {
 	left: 0;
 	background-image: url("../assets/icons/prev.png");
 	background-position: left;
+}
+@media screen and (max-width: 1000px) {
+	.container {
+		display: block;
+	}
 }
 </style>

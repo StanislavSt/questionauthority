@@ -7,7 +7,7 @@
 						<img :src="image.filename" :alt="image.name " />
 					</div>
 				</div>
-				<ProductCarousel class="hide_carousel" :blok="blok.images" />
+				<ProductCarousel :blok="blok.images" />
 			</div>
 			<div class="right">
 				<div class="product__information">
@@ -152,7 +152,7 @@ export default {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-	margin: 0 0.5rem 5rem;
+
 	top: 25%;
 	padding-top: 3rem;
 	min-height: 20rem;
@@ -246,9 +246,7 @@ export default {
 .snipcart-summary {
 	display: block;
 }
-.hide_carousel {
-	display: none;
-}
+
 @media screen and (max-width: 1000px) {
 	.product {
 		flex-direction: column;
@@ -256,15 +254,13 @@ export default {
 		padding-top: 2rem;
 	}
 	.product__information {
-		max-width: 450px;
+		max-width: 85%;
 		padding-top: 0;
+		margin-bottom: 0;
 	}
 	.product .right {
 		display: flex;
 		justify-content: center;
-	}
-	.hide_carousel {
-		display: block;
 	}
 	.product__images {
 		display: none;

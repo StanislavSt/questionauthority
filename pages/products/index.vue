@@ -80,8 +80,7 @@ export default {
 
 .overview {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 5rem;
+	grid-template-columns: repeat(3, auto);
 	margin: 0px;
 	padding: 0px;
 	margin-top: 20px;
@@ -129,5 +128,12 @@ export default {
 	text-align: center;
 	font-size: 12px;
 	min-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.overview {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+	}
 }
 </style>

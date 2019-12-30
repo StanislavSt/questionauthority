@@ -1,14 +1,14 @@
 <template>
 	<div class="sticky">
-		<div class="date-container">{{timestamp}}</div>
 		<div class="logo-container">
-			<nuxt-link tag="img" :src="require('@/assets/QA_Logo_White.png')" to="/"></nuxt-link>
+			<nuxt-link tag="img" :src="require('@/assets/QA_Logo.png')" to="/"></nuxt-link>
+			<nuxt-link class="news-text" to="/">Question</nuxt-link>
 		</div>
 		<div class="consume-container">
-			<a class="snipcart-checkout">CONSUME</a>
-			<div class="snipcart-summary">
-				(
-				<a class="snipcart-items-count" />)
+			<nuxt-link class="news-text2" to="/">Authority</nuxt-link>
+			<div class="wrapper">
+				<nuxt-link class="products" to="/products">shop</nuxt-link>
+				<a class="snipcart-checkout">bag</a>
 			</div>
 		</div>
 	</div>
@@ -16,36 +16,12 @@
 <script>
 export default {
 	data: function() {
-		return {
-			timestamp: ""
-		};
-	},
-	created() {
-		setInterval(this.getNow, 1000);
-	},
-	methods: {
-		getNow: function() {
-			const today = new Date();
-			const date =
-				today.getFullYear() +
-				"-" +
-				(today.getMonth() + 1) +
-				"-" +
-				today.getDate();
-			const time =
-				today.getHours() +
-				":" +
-				today.getMinutes() +
-				":" +
-				today.getSeconds();
-			const dateTime = date + " " + time;
-			this.timestamp = dateTime;
-		}
+		return {};
 	}
 };
 </script>
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:600,900&display=swap");
 * {
 	font-family: "Raleway", sans-serif;
 	font-size: 18px;
@@ -53,16 +29,14 @@ export default {
 	color: white;
 }
 .sticky {
-	/*position: absolute;
-	top: 0;*/
-	padding: 0 1rem;
+	position: fixed;
+	top: 0;
 	display: flex;
 	width: 100%;
 	height: 2.3rem;
 	z-index: 999;
 	background: black;
 }
-.date-container,
 .consume-container,
 .logo-container {
 	flex: 1;
@@ -70,30 +44,43 @@ export default {
 	align-items: center;
 }
 .consume-container {
-	justify-content: flex-end;
+	justify-content: space-between;
+	margin-right: 1rem;
 }
-.snipcart-checkout:hover {
+.wrapper > a:hover {
 	opacity: 0.8;
 	cursor: pointer;
 }
-.snipcart-total-items {
-	height: 50px;
-	width: 50px;
-	color: white;
+.wrapper > a {
+	font-size: 16px;
+	font-weight: 100;
+}
+.products {
+	text-decoration: none;
 }
 .logo-container {
-	justify-content: center;
+	justify-content: space-between;
+	background: white;
 }
 .logo-container img {
 	height: 100%;
 	width: auto;
-	object-fit: contain;
 	cursor: pointer;
+	margin-left: 1rem;
 }
 .logo-container img:hover {
 	opacity: 0.7;
 	filter: alpha(opacity=70); /* For IE8 and earlier */
 }
+.news-text,
+.news-text2 {
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.news-text {
+	color: black;
+}
+
 @media screen and (max-width: 600px) {
 	* {
 		font-size: 14px;
@@ -101,9 +88,19 @@ export default {
 	.date-container {
 		display: none;
 	}
+	.news-text,
+	.news-text2 {
+		display: none;
+	}
+	.consume-container {
+		justify-content: flex-end;
+	}
 	.logo-container {
-		justify-content: flex-start;
-		max-width: 60px;
+		max-width: 50%;
+	}
+	.sticky {
+		position: static;
+		top: 0;
 	}
 }
 </style>

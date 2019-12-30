@@ -40,7 +40,7 @@ export default {
 			this.$refs["myText"].style.position = "absolute";
 			this.$refs["myText"].style.visibility = "hidden";
 			this.$refs["myText"].style.display = "block";
-			const height = this.$refs["myText"].clientHeight + 15 + "px";
+			const height = this.$refs["myText"].clientHeight + "px";
 			this.computedHeight = height;
 			this.$refs["myText"].style.height = 0;
 			this.$refs["myText"].style.position = null;
@@ -73,8 +73,6 @@ export default {
 	margin-right: auto;
 	width: 100%;
 }
-.content-container {
-}
 .myText {
 	height: 0;
 	overflow: hidden;
@@ -84,5 +82,10 @@ export default {
 ul {
 	list-style-type: none;
 	padding: 0.5rem 0 0 0;
+}
+@media screen and (max-width: 1000px) {
+	.content {
+		margin-top: 0;
+	}
 }
 </style>
