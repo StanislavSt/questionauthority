@@ -24,8 +24,9 @@ export default {
 }
 .news-container {
 	display: grid;
+	grid-template-columns: auto auto;
 	grid-gap: 3rem;
-	width: 50rem;
+	width: 100rem;
 	max-width: 100%;
 	max-height: 100%;
 	margin-left: auto;
