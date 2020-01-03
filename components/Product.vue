@@ -152,7 +152,6 @@ export default {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-
 	top: 25%;
 	padding-top: 3rem;
 	min-height: 20rem;
