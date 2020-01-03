@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<FeaturedCollection />
-		<div class="text">Collections</div>
 		<News :blok="collections" />
 		<InstagramGallery />
 		<InformationLogo />
@@ -31,12 +30,4 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Raleway:600,900&display=swap");
-.text {
-	font-family: "Raleway", sans-serif;
-	margin-top: 5rem;
-	text-align: center;
-	font-size: 32px;
-	text-transform: uppercase;
-}
 </style>

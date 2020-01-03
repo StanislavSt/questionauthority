@@ -1,9 +1,12 @@
 <template>
-	<div class="news-container animated fadeIn">
-		<div v-for="item in this.blok.stories" :key="item.id" class="image-container">
-			<nuxt-link tag="img" :src="item.content.thumbnail" :to="'/' + item.full_slug"></nuxt-link>
-			<div class="image-description">
-				<div class="item">{{item.content.title}}</div>
+	<div class="news-wrapper">
+		<div class="text">Collections</div>
+		<div class="news-container animated fadeIn">
+			<div v-for="item in this.blok.stories" :key="item.id" class="image-container">
+				<nuxt-link tag="img" :src="item.content.thumbnail" :to="'/' + item.full_slug"></nuxt-link>
+				<div class="image-description">
+					<div class="item">{{item.content.title}}</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -17,7 +20,9 @@ export default {
 };
 </script>
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Raleway:600,900&display=swap");
 * {
+	font-family: "Raleway", sans-serif;
 	color: white;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -59,9 +64,26 @@ export default {
 	background: black;
 	font-size: 15px;
 }
-@media screen and (max-width: 720px) {
+.text {
+	margin-top: 5rem;
+	text-align: center;
+	font-size: 32px;
+	text-transform: uppercase;
+	color: black;
+}
+@media screen and (max-width: 780px) {
 	.image-container {
 		padding-top: 0;
+	}
+	.news-container {
+		grid-template-columns: auto;
+	}
+	.image-container .image-description .item {
+		font-size: 14px;
+	}
+	.text {
+		font-size: 5vw;
+		margin-top: 2rem;
 	}
 }
 </style>

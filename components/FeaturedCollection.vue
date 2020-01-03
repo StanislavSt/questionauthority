@@ -2,12 +2,10 @@
 	<div class="section-featured-collection">
 		<div class="featured-collection">
 			<nuxt-link class="section-right" to="/products">
-				<span class="span-shop">Kiril Kiryakov x Question Authority</span>
-				<!--<button class="btn-shop">Shop</button>-->
+				<span class="span-collection-name">Kiril Kiryakov x Question Authority</span>
 			</nuxt-link>
 			<nuxt-link class="section-left" to="/products">
-				<span class="span-shop">Kiril Kiryakov x Question Authority</span>
-				<!--<button class="btn-shop">Shop</button>-->
+				<span class="span-collection-name">Kiril Kiryakov x Question Authority</span>
 			</nuxt-link>
 		</div>
 	</div>
@@ -18,22 +16,6 @@ export default {};
 </script>
 
 <style scoped>
-.btn-shop {
-	background: transparent;
-	color: white;
-	height: 40px;
-	width: 120px;
-	border: 2px solid black;
-	cursor: pointer;
-}
-.span-shop {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	color: white;
-	background-color: black;
-	margin-left: 5px;
-}
 .section-featured-collection {
 	margin-top: 2.3rem;
 	height: 40vw;
@@ -67,5 +49,29 @@ export default {};
 }
 .section-right:hover ~ .section-left {
 	flex: 1;
+}
+.span-collection-name {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: white;
+	background-color: black;
+	margin-left: 5px;
+}
+@media screen and (max-width: 780px) {
+	.section-featured-collection {
+		margin-top: 0;
+		height: 120vw;
+	}
+	.featured-collection {
+		flex-direction: column;
+	}
+	.section-right,
+	.section-left {
+		flex: 1;
+	}
+	.span-collection-name {
+		font-size: 2.5vw;
+	}
 }
 </style>
