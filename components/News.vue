@@ -3,7 +3,7 @@
 		<div class="text">Collections</div>
 		<div class="news-container animated fadeIn">
 			<div v-for="item in this.blok.stories" :key="item.id" class="image-container">
-				<nuxt-link tag="img" :src="item.content.thumbnail" :to="'/' + item.full_slug"></nuxt-link>
+				<nuxt-link tag="img" v-lazy="item.content.thumbnail" :to="'/' + item.full_slug"></nuxt-link>
 				<div class="image-description">
 					<div class="item">{{item.content.title}}</div>
 				</div>

@@ -103,5 +103,11 @@ export default {
 		position: static;
 		top: 0;
 	}
+	.wrapper {
+		margin: 0 2rem;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
 }
 </style>
