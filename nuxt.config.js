@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     "~/plugins/components",
     "~/plugins/filters",
+    "@/plugins/vue-lazyload",
     { src: "~/plugins/vue-product-zoomer", mode: "client" }
   ],
   router: {

@@ -1,55 +1,11 @@
 <template>
 	<div class="container-gallery">
 		<a
+			v-for="(image,index) in images"
+			:key="index"
 			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
 		>
-			<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-		</a>
-
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic2.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic4.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic3.jpg" alt />
-		</a>
-		<a
-			href="https://www.facebook.com/questionauthoritysf/photos/a.494778897292773/1712915928812391/?type=3&theater"
-		>
-			<img class="image" src="@/assets/Pictures/Pic6.jpg" alt />
+			<img class="image" v-lazy="image" alt />
 		</a>
 	</div>
 </template>
@@ -58,7 +14,20 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			images: [
+				"https://cdn.pixabay.com/photo/2016/09/16/14/41/colorful-rocks-1674179__340.jpg",
+				"https://cdn.pixabay.com/photo/2017/01/14/02/31/geometric-patterns-1978688__340.png",
+				"https://cdn.pixabay.com/photo/2018/06/25/15/43/the-alps-3497198__340.jpg",
+				"https://cdn.pixabay.com/photo/2015/07/10/14/04/spectrum-839235__340.jpg",
+				"https://cdn.pixabay.com/photo/2012/12/21/10/07/agriculture-71656__340.jpg",
+				"https://cdn.pixabay.com/photo/2017/05/05/15/20/candy-2287360__340.jpg",
+				"https://cdn.pixabay.com/photo/2017/01/14/02/31/geometric-patterns-1978688__340.png",
+				"https://cdn.pixabay.com/photo/2018/06/25/15/43/the-alps-3497198__340.jpg",
+				"https://cdn.pixabay.com/photo/2015/07/10/14/04/spectrum-839235__340.jpg",
+				"https://cdn.pixabay.com/photo/2012/12/21/10/07/agriculture-71656__340.jpg"
+			]
+		};
 	}
 };
 </script>
