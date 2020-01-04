@@ -3,7 +3,7 @@
 		<div class="collection-container">
 			<div class="images-container">
 				<div v-for="(image,index) in post.images" :key="index" class="image-container">
-					<img :src="image.filename" alt />
+					<img v-lazy="image.filename" alt />
 				</div>
 			</div>
 			<div class="collection-name-container">

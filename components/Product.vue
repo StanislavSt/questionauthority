@@ -130,6 +130,7 @@ export default {
 
 .product {
 	padding: 10rem 0 2rem 0;
+	min-height: 800px;
 	margin: 0 auto;
 	width: 75%;
 	display: flex;
