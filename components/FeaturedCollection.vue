@@ -25,7 +25,6 @@ export default {};
 	height: 100%;
 	width: 100%;
 	display: flex;
-	border: 2px solid black;
 }
 .section-right,
 .section-left {
@@ -48,7 +47,7 @@ export default {};
 	background-image: url("../assets/Kiril/Urb/Negative0-21-20.jpg");
 }
 .section-right:hover ~ .section-left {
-	flex: 1;
+	flex: 0.85;
 }
 .span-collection-name {
 	position: absolute;

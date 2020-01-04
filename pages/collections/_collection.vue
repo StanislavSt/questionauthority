@@ -1,37 +1,30 @@
 <template>
-	<div class="container">
-		<div class="video-container animated fadeIn delay-0.5s" v-if="post.youtube">
-			<div class="video-title">{{post.title}}</div>
-			<div class="iframe-container">
-				<iframe
-					:src="post.youtube.url"
-					frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				></iframe>
+	<div class="collection-wrapper">
+		<div class="collection-container">
+			<div class="images-container">
+				<div v-for="(image,index) in post.images" :key="index" class="image-container">
+					<img :src="image.filename" alt />
+				</div>
+			</div>
+			<div class="collection-name-container">
+				<div class="text-wrapper">
+					<h2 v-if="post.title">{{post.title}}</h2>
+					<p v-if="post.shot_by">Shot by: {{post.shot_by}}</p>
+					<p v-if="post.models">Modelled by: {{post.models}}</p>
+					<p v-if="post.additional_text">{{post.additional_text}}</p>
+				</div>
 			</div>
 		</div>
-		<ProductsGrid v-if="products" :products="products" />
-		<InformationLogo />
 	</div>
 </template>
 
 <script>
-import ProductsGrid from "@/components/ProductsGrid.vue";
-import InformationLogo from "@/components/InformationLogo.vue";
 import { getPost, getProducts } from "@/api";
 export default {
-	components: {
-		ProductsGrid,
-		InformationLogo
-	},
 	async asyncData(context) {
 		const post = await getPost(context);
-		const products = await getProducts(context);
-
 		return {
-			post: post.story.content,
-			products: products.stories
+			post: post.story.content
 		};
 	}
 };
@@ -39,54 +32,53 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 
-.iframe-container {
-	position: relative;
-	padding: 0 2rem;
-	max-width: 840px;
-	min-height: 500px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 0;
+.collection-wrapper {
+	margin-top: 10rem;
 }
-.iframe-container iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
+.collection-container {
+	width: 60%;
+	min-width: 780px;
+	margin: 0 auto;
+	display: flex;
+}
+.images-container {
+	flex: 1.8;
+}
+.image-container img {
 	width: 100%;
-	height: 100%;
+	margin-bottom: 1rem;
 }
-.container {
-	width: 100%;
+.collection-name-container {
+	margin-left: 3rem;
+	flex: 1;
 }
-.video-container {
-	padding-top: 10rem;
-	text-align: center;
+.text-wrapper {
+	border-top: 2px solid black;
+	display: inline-block;
 }
-.video-container .video-title {
-	font-size: 2rem;
-	text-transform: uppercase;
-	padding-bottom: 3rem;
+.text-wrapper > * {
+	margin-top: 2rem;
 }
-@media screen and (max-width: 860px) {
-	.iframe-container {
-		margin: 0 1rem;
-		min-height: 56vw;
+.text-wrapper h2 {
+	margin-top: 1rem;
+	font-family: Raleway;
+}
+@media screen and (max-width: 780px) {
+	.collection-wrapper {
+		margin-top: 2rem;
 	}
-	.video-container {
-		padding-top: 4rem;
+	.collection-container {
+		flex-direction: column;
+		width: 80%;
+		min-width: 0;
 	}
-	.video-container .video-title {
-		font-size: 22px;
+	.collection-name-container {
+		order: 1;
+		width: 100%;
+		margin: 2rem 0;
 	}
-}
-@media screen and (max-width: 670px) {
-	.video-container .video-title {
-		font-size: 16px;
-	}
-}
-@media screen and (max-width: 400px) {
-	.video-container .video-title {
-		font-size: 14px;
+	.images-container {
+		order: 2;
 	}
 }
 </style>
