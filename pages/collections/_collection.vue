@@ -31,9 +31,9 @@ export default {
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
-
 .collection-wrapper {
 	margin-top: 10rem;
+	min-height: 1000px;
 }
 .collection-container {
 	width: 60%;
